@@ -1,6 +1,7 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT 1️⃣
 import {Poppins} from "next/font/google"
 import {PropsWithChildren} from "react"
+import {Navigation} from "../components/index"
 import "../styles/global.css"
 
 const poppins = Poppins({
@@ -12,7 +13,10 @@ const Layout = function Layout({children}: PropsWithChildren) {
   return (
     <html lang="en">
       <head />
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Navigation />
+        {children}
+      </body>
     </html>
   )
 }
