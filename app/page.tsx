@@ -1,7 +1,13 @@
-// DONE REVIEWING: GITHUB COMMIT 3️⃣
+// DONE REVIEWING: GITHUB COMMIT 4️⃣
+
+import {Hero} from "../components/index"
 
 const Page = function Page() {
-  return <main>OMQ Solutions Agency</main>
+  return (
+    <main>
+      <Hero />
+    </main>
+  )
 }
 
 export default Page
