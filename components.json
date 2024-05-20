@@ -1,5 +1,5 @@
 {
-  "reviewed": "true",
+  "reviewed": "true 1️⃣",
   "$schema": "https://ui.shadcn.com/schema.json",
   "style": "default",
   "tsx": true,
@@ -8,7 +8,7 @@
     "config": "tailwind.config.js",
     "css": "styles/global.css",
     "cssVariables": true,
-    "baseColor": "zinc",
+    "baseColor": "slate",
     "prefix": ""
   },
   "aliases": {

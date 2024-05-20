@@ -1,4 +1,4 @@
-/* DONE REVIEWING: GITHUB COMMIT */
+/* DONE REVIEWING: GITHUB COMMIT 1️⃣ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,24 +7,24 @@
   :root {
     /* GROUNDS */
     --background: theme(colors.white);
-    --background-layer-2: theme(colors.zinc.50);
-    --foreground: theme(colors.zinc.950);
+    --background-layer-2: theme(colors.slate.50);
+    --foreground: theme(colors.slate.950);
 
     /* DIVIDERS */
-    --border: theme(colors.zinc.200);
+    --border: theme(colors.slate.200);
     --ring: var(--foreground);
     --input: var(--border);
 
     /* BRANDS */
-    --primary: theme(colors.red.600);
-    --primary-foreground: theme(colors.red.50);
-    --secondary: theme(colors.indigo.600);
-    --secondary-foreground: theme(colors.indigo.50);
+    --primary: theme(colors.violet.500);
+    --primary-foreground: theme(colors.violet.50);
+    --secondary: theme(colors.blue.500);
+    --secondary-foreground: theme(colors.blue.50);
     --accent: var(--foreground);
     --accent-foreground: var(--background-layer-2);
 
-    --muted: theme(colors.zinc.100);
-    --muted-foreground: theme(colors.zinc.500);
+    --muted: theme(colors.slate.100);
+    --muted-foreground: theme(colors.slate.500);
 
     /* COMPONENTS */
     --card: var(--background-layer-2);
@@ -35,10 +35,10 @@
   }
 
   .dark {
-    --background: theme(colors.zinc.950);
-    --background-layer-2: theme(colors.zinc.900);
+    --background: theme(colors.slate.950);
+    --background-layer-2: theme(colors.slate.900);
     --foreground: theme(colors.white);
-    --border: theme(colors.zinc.800);
+    --border: theme(colors.slate.800);
   }
 }
 
