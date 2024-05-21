@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣
+// DONE REVIEWING: GITHUB COMMIT 2️⃣
 
 import {
   ChartBarIcon,
@@ -39,7 +39,22 @@ const services = [
 ]
 
 const Services = function Services() {
-  return <div>Services</div>
+  return (
+    <div className="py-24 sm:py-32">
+      <div className="mx-auto max-w-xl-7 px-6 lg:px-8">
+        <div className="mx-auto max-w-xl-2 lg:text-center">
+          <h2 className="text-base font-semi-bold leading-7 text-violet-500">Services</h2>
+          <p className="mt-2 text-xl-3 font-bold tracking-tight text-white sm:text-xl-4">
+            Transforming Your Digital Presence
+          </p>
+          <p className="mt-6 text-lg leading-8 text-slate-400">
+            OMQ Solutions offers services to elevate your brand and drive your business forward.
+            Discover how we can help you achieve your goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Services
