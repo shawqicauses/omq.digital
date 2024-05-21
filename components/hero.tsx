@@ -1,8 +1,9 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣
+// DONE REVIEWING: GITHUB COMMIT 2️⃣
 
 import {ChevronRightIcon} from "@heroicons/react/24/outline"
 import Image from "next/image"
 import Link from "next/link"
+import {Button} from "./ui"
 
 const Hero = function Hero() {
   const classes = {calc: {base: ["50%", "11rem"].join("-"), sm: ["50%", "30rem"].join("-")}}
@@ -32,6 +33,29 @@ const Hero = function Hero() {
               View more{" "}
               <ChevronRightIcon aria-hidden="true" className="h-4 w-4 stroke-2 text-current" />
             </Link>
+          </div>
+        </div>
+        <div className="text-center">
+          <h1 className="text-xl-4 font-bold tracking-tight text-white sm:text-xl-6">
+            Transforming Digital{" "}
+            <span className="underline decoration-primary decoration-dotted underline-offset-4">
+              Dreams
+            </span>{" "}
+            into Reality
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            OMQ Solutions is your trusted partner in innovative web development, seam-less digital
+            marketing, and cutting-edge technology solutions.
+          </p>
+          <div className="shc-flex-center mt-10 gap-x-6">
+            <Button asChild>
+              <Link href="/contact">Get Started</Link>
+            </Button>
+            <Button variant="link" asChild>
+              <Link href="/about" className="text-white">
+                About us
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
