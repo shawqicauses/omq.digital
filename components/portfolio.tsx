@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 5️⃣
+// DONE REVIEWING: GITHUB COMMIT 6️⃣
 
 import Image from "next/image"
 
@@ -36,7 +36,7 @@ const Portfolio = function Portfolio() {
 
   return (
     <div className="py-24 sm:py-32">
-      <div className="mx-auto max-w-xl-7 px-6 lg:px-8">
+      <div className="mx-auto max-w-xl-7 xl:px-8">
         <div className="mx-auto max-w-xl-2 lg:text-center">
           <h2 className="text-base font-medium leading-7 text-primary">Portfolio</h2>
           <p className="mt-2 text-xl-3 font-bold tracking-tight text-white sm:text-xl-4">
@@ -47,11 +47,11 @@ const Portfolio = function Portfolio() {
             delivered for our clients.
           </p>
         </div>
-        <div className="mt-32 flex w-full flex-col gap-32">
+        <div className="mt-32 flex w-full flex-col gap-20 xl:gap-24">
           {portfolios.map((portfolio) => (
             <div
               key={portfolio.id}
-              className="group relative overflow-hidden rounded-xl bg-background-layer-2 pb-20 sm:pb-24 xl:pb-0">
+              className="group relative bg-background-layer-2 pb-20 sm:pb-24 xl:rounded-xl xl:pb-0">
               <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
                 <div
                   className={`absolute left-[calc(${classes.calc})] top-[calc(${classes.calc})] transform-gpu blur-xl-3`}>
