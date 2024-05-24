@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 4️⃣
+// DONE REVIEWING: GITHUB COMMIT 5️⃣
 
 import Image from "next/image"
 
@@ -29,7 +29,7 @@ const portfolios = [
 
 const Portfolio = function Portfolio() {
   const classes = {
-    calc: {base: ["50%", "36rem"].join("-"), mobile: ["50%", "19rem"].join("-")},
+    calc: ["50%", "36rem"].join("-"),
     clipPath:
       "polygon(74% 44%, 100% 61%, 97% 26%, 85% 0%, 80% 2%, 72% 32%, 60% 62%, 52% 68%, 47% 58%, 45% 34%, 27% 76%, 0% 64%, 17% 100%, 27% 76%, 76% 97%, 74% 44%)"
   }
@@ -51,10 +51,10 @@ const Portfolio = function Portfolio() {
           {portfolios.map((portfolio) => (
             <div
               key={portfolio.id}
-              className="group relative rounded-xl bg-background-layer-2 pb-20 sm:pb-24 xl:pb-0">
+              className="group relative overflow-hidden rounded-xl bg-background-layer-2 pb-20 sm:pb-24 xl:pb-0">
               <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
                 <div
-                  className={`absolute left-[calc(${classes.calc.mobile})] top-[calc(${classes.calc.mobile})] transform-gpu blur-xl-3 xl:left-[calc(${classes.calc.base})] xl:top-[calc(${classes.calc.base})]`}>
+                  className={`absolute left-[calc(${classes.calc})] top-[calc(${classes.calc})] transform-gpu blur-xl-3`}>
                   <div
                     className="aspect-[1097/1023] w-[68.5625rem] bg-gradient-to-r from-primary to-primary opacity-25"
                     style={{clipPath: classes.clipPath}}
