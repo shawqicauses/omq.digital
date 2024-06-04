@@ -1,5 +1,28 @@
-// DONE REVIEWING: GITHUB COMMIT 2️⃣
+// DONE REVIEWING: GITHUB COMMIT 3️⃣
+import {
+  BuildingStorefrontIcon,
+  CreditCardIcon,
+  WrenchScrewdriverIcon
+} from "@heroicons/react/20/solid"
 import Image from "next/image"
+
+const features = [
+  {
+    name: "Easy Store Setup",
+    description: "Get your store up and running in no time with our user-friendly setup process.",
+    icon: BuildingStorefrontIcon
+  },
+  {
+    name: "Customizable Templates",
+    description: "Choose from professional templates that you can customize to match your brand.",
+    icon: WrenchScrewdriverIcon
+  },
+  {
+    name: "Secure Payment Processing",
+    description: "A safe and secure shopping experience with our integrated payment system.",
+    icon: CreditCardIcon
+  }
+]
 
 const MarketPlace = function MarketPlace() {
   return (
