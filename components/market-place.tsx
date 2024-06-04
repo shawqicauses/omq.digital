@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 3️⃣
+// DONE REVIEWING: GITHUB COMMIT 4️⃣
 import {
   BuildingStorefrontIcon,
   CreditCardIcon,
@@ -14,12 +14,12 @@ const features = [
   },
   {
     name: "Customizable Templates",
-    description: "Choose from professional templates that you can customize to match your brand.",
+    description: "Choose from our templates that you can customize to match your brand.",
     icon: WrenchScrewdriverIcon
   },
   {
     name: "Secure Payment Processing",
-    description: "A safe and secure shopping experience with our integrated payment system.",
+    description: "A safe and secure shopping experience with our payment system.",
     icon: CreditCardIcon
   }
 ]
@@ -46,6 +46,22 @@ const MarketPlace = function MarketPlace() {
               height={1442}
               className="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"
             />
+            <div className="max-w-xl lg:row-start-3 lg:mt-10 lg:max-w-md lg:border-t lg:border-white/10 lg:pt-10">
+              <dl className="max-w-xl space-y-8 text-base leading-7 text-slate-300 lg:max-w-none">
+                {features.map((element) => (
+                  <div key={element.name} className="relative">
+                    <dt className="ml-9 inline-block font-semi-bold text-white">
+                      <element.icon
+                        aria-hidden="true"
+                        className="absolute left-1 top-1 h-5 w-5 text-primary"
+                      />
+                      {element.name}:
+                    </dt>{" "}
+                    <dd className="inline">{element.description}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </div>
         </div>
       </div>
