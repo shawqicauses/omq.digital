@@ -1,4 +1,6 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣
+// DONE REVIEWING: GITHUB COMMIT 2️⃣
+import Image from "next/image"
+
 const MarketPlace = function MarketPlace() {
   return (
     <div className="bg-slate-950 py-24">
@@ -14,6 +16,13 @@ const MarketPlace = function MarketPlace() {
                 businesses and provide everything for them.
               </p>
             </div>
+            <Image
+              src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+              alt="Market-Place Screen Shot"
+              width={2432}
+              height={1442}
+              className="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"
+            />
           </div>
         </div>
       </div>
