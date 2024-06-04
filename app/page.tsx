@@ -1,6 +1,6 @@
-// DONE REVIEWING: GITHUB COMMIT 6️⃣
+// DONE REVIEWING: GITHUB COMMIT 7️⃣
 
-import {Hero, Portfolio, Services} from "../components/index"
+import {Hero, MarketPlace, Portfolio, Services} from "../components/index"
 
 const Page = function Page() {
   return (
@@ -8,6 +8,7 @@ const Page = function Page() {
       <Hero />
       <Services />
       <Portfolio />
+      <MarketPlace />
     </main>
   )
 }
