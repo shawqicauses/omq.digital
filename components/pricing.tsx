@@ -1,4 +1,32 @@
-// DONE REVIEWING: GITHUB COMMIT 2️⃣
+// DONE REVIEWING: GITHUB COMMIT 4️⃣
+
+const tiers = [
+  {
+    id: "tier-personal",
+    name: "Personal",
+    href: "#",
+    price: 39,
+    description: "For individuals who need flexibility and customization.",
+    featured: true,
+    features: ["Up to 10 products", "Up to 1500 subscribers", "Basic analytics", "24/7 support"]
+  },
+  {
+    id: "tier-team",
+    name: "Team",
+    href: "#",
+    price: 99,
+    description: "For companies that need personalized support.",
+    featured: false,
+    features: [
+      "Un-limited products",
+      "Un-limited subscribers",
+      "Advanced analytics",
+      "Personalization dashboard",
+      "24/7 support"
+    ]
+  }
+]
+
 const Pricing = function Pricing() {
   const clipPath =
     "polygon(74% 44%, 100% 61%, 97% 26%, 85% 0%, 80% 2%, 72% 32%, 60% 62%, 52% 68%, 47% 58%, 45% 34%, 27% 76%, 0% 64%, 17% 100%, 27% 76%, 76% 97%, 74% 44%)"
