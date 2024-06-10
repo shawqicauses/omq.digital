@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 6️⃣
+// DONE REVIEWING: GITHUB COMMIT 7️⃣
 
 import Image from "next/image"
 
@@ -37,7 +37,7 @@ const Portfolio = function Portfolio() {
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-xl-7 xl:px-8">
-        <div className="mx-auto max-w-xl-2 lg:text-center">
+        <div className="mx-auto max-w-xl-2 px-6 sm:px-0 lg:text-center">
           <h2 className="text-base font-medium leading-7 text-primary">Portfolio</h2>
           <p className="mt-2 text-xl-3 font-bold tracking-tight text-white sm:text-xl-4">
             Our Work Always Speaks for Itself
