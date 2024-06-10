@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣
+// DONE REVIEWING: GITHUB COMMIT 2️⃣
 const Pricing = function Pricing() {
   const clipPath =
     "polygon(74% 44%, 100% 61%, 97% 26%, 85% 0%, 80% 2%, 72% 32%, 60% 62%, 52% 68%, 47% 58%, 45% 34%, 27% 76%, 0% 64%, 17% 100%, 27% 76%, 76% 97%, 74% 44%)"
@@ -12,6 +12,16 @@ const Pricing = function Pricing() {
           className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-violet-400 to-blue-400 opacity-30"
           style={{clipPath}}
         />
+      </div>
+      <div className="mx-auto max-w-xl-2 text-center lg:max-w-xl-4">
+        <h2 className="text-base font-medium leading-7 text-primary">Pricing</h2>
+        <p className="mt-2 text-xl-3 font-bold tracking-tight text-white sm:text-xl-4">
+          Simple and transparent pricing
+        </p>
+        <p className="mt-6 text-lg leading-8 text-slate-400">
+          Choose a plan that is right for you and your business needs and get started today with OMQ
+          Market-Place services and support.
+        </p>
       </div>
     </div>
   )
