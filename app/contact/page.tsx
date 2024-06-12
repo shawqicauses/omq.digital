@@ -1,7 +1,13 @@
-// DONE REVIEWING: GITHUB COMMIT 3️⃣
+"use client"
+
+// DONE REVIEWING: GITHUB COMMIT 4️⃣
 
 import {BuildingOffice2Icon, EnvelopeIcon, PhoneIcon} from "@heroicons/react/24/outline"
+import {zodResolver} from "@hookform/resolvers/zod"
 import {Fragment} from "react"
+import {useForm} from "react-hook-form"
+import {z} from "zod"
+import {Form} from "../../components/ui"
 
 const address = (
   <Fragment>
@@ -30,10 +36,30 @@ const contacts = [
   }
 ]
 
+const ContactFormScheme = z.object({
+  firstName: z.string().min(1),
+  lastName: z.string().min(1),
+  email: z.string().min(1),
+  phone: z.string().min(1),
+  message: z.string().min(1)
+})
+
 const Page = function Page() {
   const id = "contact-pattern"
   const clipPath =
     "polygon(74% 56%, 100% 38%, 97% 73%, 85% 100%, 80% 98%, 72% 67%, 60% 37%, 52% 32%, 47% 41%, 45% 65%, 27% 23%, 0% 35%, 17% 0%, 27% 23%, 76% 2%, 74% 56%)"
+
+  const form = useForm<z.infer<typeof ContactFormScheme>>({
+    mode: "onChange",
+    resolver: zodResolver(ContactFormScheme),
+    defaultValues: {
+      firstName: null,
+      lastName: null,
+      email: null,
+      phone: null,
+      message: null
+    }
+  })
 
   return (
     <div className="relative isolate">
@@ -95,6 +121,15 @@ const Page = function Page() {
             </dl>
           </div>
         </div>
+        <Form {...form}>
+          <form className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:pt-48">
+            <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+              <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                <div />
+              </div>
+            </div>
+          </form>
+        </Form>
       </div>
     </div>
   )
