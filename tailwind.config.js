@@ -1,7 +1,8 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT 1️⃣
 /** @type {import('tailwindcss').Config} */
 
 const tailwindCSSAnimate = require("tailwindcss-animate")
+const tailwindCSSForms = require("@tailwindcss/forms")
 
 module.exports = {
   darkMode: ["class"],
@@ -227,5 +228,5 @@ module.exports = {
       "xl-3": "3.75rem"
     }
   },
-  plugins: [tailwindCSSAnimate]
+  plugins: [tailwindCSSAnimate, tailwindCSSForms]
 }
