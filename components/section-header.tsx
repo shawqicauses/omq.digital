@@ -1,14 +1,24 @@
-// DONE REVIEWING: GITHUB COMMIT 3️⃣
+// DONE REVIEWING: GITHUB COMMIT 4️⃣
 import Image from "next/image"
 
-const SectionHeader = function SectionHeader() {
+type SectionHeaderProps = {
+  image?: string
+  title: string
+  description: string
+}
+
+const SectionHeader = function SectionHeader({
+  image = "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+  title,
+  description
+}: SectionHeaderProps) {
   const clipPath =
     "polygon(74% 44%, 100% 61%, 97% 26%, 85% 0%, 80% 2%, 72% 32%, 60% 62%, 52% 68%, 47% 58%, 45% 34%, 27% 76%, 0% 64%, 17% 100%, 27% 76%, 76% 97%, 74% 44%)"
 
   return (
     <div className="relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 lg:px-8">
       <Image
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+        src={image}
         alt="Section Header Image"
         fill
         className="absolute inset-0 -z-10 h-full w-full object-cover opacity-10"
@@ -26,10 +36,8 @@ const SectionHeader = function SectionHeader() {
         />
       </div>
       <div className="mx-auto max-w-xl-2 text-center">
-        <h2 className="text-xl-4 font-bold tracking-tight text-foreground sm:text-xl-6">
-          Section Heading
-        </h2>
-        <p className="mt-6 text-lg leading-8 text-muted-foreground">Section Description</p>
+        <h2 className="text-xl-4 font-bold tracking-tight text-foreground sm:text-xl-6">{title}</h2>
+        <p className="mt-6 text-lg leading-8 text-muted-foreground">{description}</p>
       </div>
     </div>
   )
