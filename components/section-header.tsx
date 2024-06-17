@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 2️⃣
+// DONE REVIEWING: GITHUB COMMIT 3️⃣
 import Image from "next/image"
 
 const SectionHeader = function SectionHeader() {
@@ -18,12 +18,18 @@ const SectionHeader = function SectionHeader() {
           className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-primary to-secondary opacity-20"
           style={{clipPath}}
         />
-        <div className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-xl-3 sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu">
-          <div
-            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-primary to-secondary opacity-20"
-            style={{clipPath}}
-          />
-        </div>
+      </div>
+      <div className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-xl-3 sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu">
+        <div
+          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-primary to-secondary opacity-20"
+          style={{clipPath}}
+        />
+      </div>
+      <div className="mx-auto max-w-xl-2 text-center">
+        <h2 className="text-xl-4 font-bold tracking-tight text-foreground sm:text-xl-6">
+          Section Heading
+        </h2>
+        <p className="mt-6 text-lg leading-8 text-muted-foreground">Section Description</p>
       </div>
     </div>
   )
