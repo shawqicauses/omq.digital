@@ -1,13 +1,13 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT 4️⃣
+// DONE REVIEWING: GITHUB COMMIT 5️⃣
 
 import {BuildingOffice2Icon, EnvelopeIcon, PhoneIcon} from "@heroicons/react/24/outline"
 import {zodResolver} from "@hookform/resolvers/zod"
 import {Fragment} from "react"
 import {useForm} from "react-hook-form"
 import {z} from "zod"
-import {Form} from "../../components/ui"
+import {Button, Form, FormControl, FormField, FormItem, FormLabel, Input} from "../../components/ui"
 
 const address = (
   <Fragment>
@@ -62,7 +62,7 @@ const Page = function Page() {
   })
 
   return (
-    <div className="relative isolate">
+    <div className="relative isolate min-h-screen">
       <div className="mx-auto grid max-w-xl-7 grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -125,7 +125,75 @@ const Page = function Page() {
           <form className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:pt-48">
             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                <div />
+                <FormField
+                  name="firstName"
+                  control={form.control}
+                  render={({field}) => (
+                    <FormItem>
+                      <FormLabel>First name</FormLabel>
+                      <FormControl>
+                        <Input {...field} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  name="lastName"
+                  control={form.control}
+                  render={({field}) => (
+                    <FormItem>
+                      <FormLabel>Last name</FormLabel>
+                      <FormControl>
+                        <Input {...field} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                <div className="sm:col-span-2">
+                  <FormField
+                    name="email"
+                    control={form.control}
+                    render={({field}) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input type="email" {...field} />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                <div className="sm:col-span-2">
+                  <FormField
+                    name="phone"
+                    control={form.control}
+                    render={({field}) => (
+                      <FormItem>
+                        <FormLabel>Phone</FormLabel>
+                        <FormControl>
+                          <Input type="tel" {...field} />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                <div className="sm:col-span-2">
+                  <FormField
+                    name="message"
+                    control={form.control}
+                    render={() => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <textarea rows={4} className="shc-input-base" />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                </div>
+              </div>
+              <div className="mt-8 flex justify-end">
+                <Button type="submit">Submit</Button>
               </div>
             </div>
           </form>
