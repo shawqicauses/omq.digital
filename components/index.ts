@@ -1,4 +1,5 @@
-// DONE REVIEWING: GITHUB COMMIT 8️⃣
+// DONE REVIEWING: GITHUB COMMIT 9️⃣
+export {default as Container} from "./container"
 export {default as Footer} from "./footer"
 export {default as Hero} from "./hero"
 export {default as MarketPlace} from "./market-place"
