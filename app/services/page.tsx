@@ -1,6 +1,6 @@
-// DONE REVIEWING: GITHUB COMMIT 2️⃣
+// DONE REVIEWING: GITHUB COMMIT 3️⃣
 import {Fragment} from "react"
-import {SectionHeader} from "../../components/index"
+import {SectionHeader, ServicesList} from "../../components/index"
 
 const ServicesPage = function ServicesPage() {
   return (
@@ -9,7 +9,7 @@ const ServicesPage = function ServicesPage() {
         title="Services"
         description="Discover how we can help you achieve your goals and drive your business forward with our expert services and solutions."
       />
-      <main>Services Page</main>
+      <ServicesList />
     </Fragment>
   )
 }

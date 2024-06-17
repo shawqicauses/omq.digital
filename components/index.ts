@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 7️⃣
+// DONE REVIEWING: GITHUB COMMIT 8️⃣
 export {default as Footer} from "./footer"
 export {default as Hero} from "./hero"
 export {default as MarketPlace} from "./market-place"
@@ -7,3 +7,4 @@ export {default as Portfolio} from "./portfolio"
 export {default as Pricing} from "./pricing"
 export {default as SectionHeader} from "./section-header"
 export {default as Services} from "./services"
+export {default as ServicesList} from "./services-list"
