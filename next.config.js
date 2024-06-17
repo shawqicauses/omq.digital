@@ -1,6 +1,6 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣
+// DONE REVIEWING: GITHUB COMMIT 2️⃣
 /** @type {import("next").NextConfig} */
 
-const nextConfig = {images: {domains: ["tailwindui.com"]}}
+const nextConfig = {images: {domains: ["tailwindui.com", "images.unsplash.com"]}}
 
 module.exports = nextConfig
