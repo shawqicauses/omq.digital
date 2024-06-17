@@ -1,10 +1,19 @@
 // DONE REVIEWING: GITHUB COMMIT 1️⃣
-/** @type {import('tailwindcss').Config} */
 
-const tailwindCSSAnimate = require("tailwindcss-animate")
-const tailwindCSSForms = require("@tailwindcss/forms")
+/* eslint import/no-extraneous-dependencies: "off" */
 
-module.exports = {
+import tailwindCSSForms from "@tailwindcss/forms"
+import {type Config} from "tailwindcss"
+import tailwindCSSAnimate from "tailwindcss-animate"
+import colors from "tailwindcss/colors"
+import {parseColor} from "tailwindcss/lib/util/color"
+import plugin from "tailwindcss/plugin"
+
+export const toRGB = function toRGB(value: string): string {
+  return parseColor(value).color.join(" ")
+}
+
+export default {
   darkMode: ["class"],
   content: [
     "./app/**/*.{ts,tsx,js,jsx}",
@@ -26,18 +35,34 @@ module.exports = {
     },
     extend: {
       colors: {
-        "background": "var(--background)",
-        "background-layer-2": "var(--background-layer-2)",
-        "foreground": "var(--foreground)",
-        "border": "var(--border)",
-        "ring": "var(--ring)",
-        "input": "var(--input)",
-        "primary": {DEFAULT: "var(--primary)", foreground: "var(--primary-foreground)"},
-        "secondary": {DEFAULT: "var(--secondary)", foreground: "var(--secondary-foreground)"},
-        "accent": {DEFAULT: "var(--accent)", foreground: "var(--accent-foreground)"},
-        "muted": {DEFAULT: "var(--muted)", foreground: "var(--muted-foreground)"},
-        "card": {DEFAULT: "var(--card)", foreground: "var(--card-foreground)"},
-        "popover": {DEFAULT: "var(--popover)", foreground: "var(--popover-foreground)"}
+        "background": "rgb(var(--background) / <alpha-value>)",
+        "foreground": "rgb(var(--foreground) / <alpha-value>)",
+        "border": "rgb(var(--border) / <alpha-value>)",
+        "border-light": "rgb(var(--border-light) / <alpha-value>)",
+        "ring": "rgb(var(--ring) / <alpha-value>)",
+        "input": "rgb(var(--input) / <alpha-value>)",
+        "primary": {
+          DEFAULT: "rgb(var(--primary) / <alpha-value>)",
+          light: "rgb(var(--primary-light) / <alpha-value>)",
+          dark: "rgb(var(--primary-dark) / <alpha-value>)",
+          foreground: "rgb(var(--primary-foreground) / <alpha-value>)"
+        },
+        "secondary": {
+          DEFAULT: "rgb(var(--secondary) / <alpha-value>)",
+          light: "rgb(var(--secondary-light) / <alpha-value>)",
+          dark: "rgb(var(--secondary-dark) / <alpha-value>)",
+          foreground: "rgb(var(--secondary-foreground) / <alpha-value>)"
+        },
+        "accent": {
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          light: "rgb(var(--accent-light) / <alpha-value>)",
+          dark: "rgb(var(--accent-dark) / <alpha-value>)",
+          foreground: "rgb(var(--accent-foreground) / <alpha-value>)"
+        },
+        "muted": {
+          DEFAULT: "rgb(var(--muted) / <alpha-value>)",
+          foreground: "rgb(var(--muted-foreground) / <alpha-value>)"
+        }
       },
       keyframes: {
         "accordion-down": {
@@ -121,7 +146,7 @@ module.exports = {
     },
     fontSize: {
       "xs": ["0.75rem", "1rem"],
-      "sm": ["0.875rem", "1.25rem"],
+      "sm": ["0.875rem", "1.5rem"],
       "base": ["1rem", "1.5rem"],
       "lg": ["1.125rem", "1.75rem"],
       "xl": ["1.25rem", "1.75rem"],
@@ -135,15 +160,15 @@ module.exports = {
       "xl-9": ["8rem", "1"]
     },
     fontWeight: {
-      "thin": 100,
-      "extra-light": 200,
-      "light": 300,
-      "normal": 400,
-      "medium": 500,
-      "semi-bold": 600,
-      "bold": 700,
-      "extra-bold": 800,
-      "black": 900
+      "thin": "100",
+      "extra-light": "200",
+      "light": "300",
+      "normal": "400",
+      "medium": "500",
+      "semi-bold": "600",
+      "bold": "700",
+      "extra-bold": "800",
+      "black": "900"
     },
     borderRadius: {
       "none": "0rem",
@@ -228,5 +253,66 @@ module.exports = {
       "xl-3": "3.75rem"
     }
   },
-  plugins: [tailwindCSSAnimate, tailwindCSSForms]
-}
+  plugins: [
+    tailwindCSSAnimate,
+    tailwindCSSForms,
+    plugin(({addBase}) => {
+      addBase({
+        ":root": {
+          "--background": toRGB(colors.white),
+          "--foreground": toRGB(colors.slate["950"]),
+
+          "--border-light": toRGB(colors.slate["100"]),
+          "--border": toRGB(colors.slate["200"]),
+          "--ring": toRGB(colors.slate["400"]),
+          "--input": toRGB(colors.slate["200"]),
+
+          "--primary": toRGB(colors.red["500"]),
+          "--primary-light": toRGB(colors.red["400"]),
+          "--primary-dark": toRGB(colors.red["600"]),
+          "--primary-foreground": toRGB(colors.red["50"]),
+
+          "--secondary": toRGB(colors.indigo["500"]),
+          "--secondary-light": toRGB(colors.indigo["400"]),
+          "--secondary-dark": toRGB(colors.indigo["600"]),
+          "--secondary-foreground": toRGB(colors.indigo["50"]),
+
+          "--accent": toRGB(colors.slate["900"]),
+          "--accent-light": toRGB(colors.slate["800"]),
+          "--accent-dark": toRGB(colors.slate["950"]),
+          "--accent-foreground": toRGB(colors.slate["100"]),
+
+          "--muted": toRGB(colors.slate["100"]),
+          "--muted-foreground": toRGB(colors.slate["500"])
+        },
+        ".dark": {
+          "--background": toRGB(colors.slate["950"]),
+          "--foreground": toRGB(colors.slate["50"]),
+
+          "--border-light": toRGB(colors.slate["900"]),
+          "--border": toRGB(colors.slate["800"]),
+          "--ring": toRGB(colors.slate["300"]),
+          "--input": toRGB(colors.slate["800"]),
+
+          "--primary": toRGB(colors.red["400"]),
+          "--primary-light": toRGB(colors.red["300"]),
+          "--primary-dark": toRGB(colors.red["500"]),
+          "--primary-foreground": toRGB(colors.red["950"]),
+
+          "--secondary": toRGB(colors.indigo["400"]),
+          "--secondary-light": toRGB(colors.indigo["300"]),
+          "--secondary-dark": toRGB(colors.indigo["500"]),
+          "--secondary-foreground": toRGB(colors.indigo["950"]),
+
+          "--accent": toRGB(colors.slate["50"]),
+          "--accent-light": toRGB(colors.white),
+          "--accent-dark": toRGB(colors.slate["100"]),
+          "--accent-foreground": toRGB(colors.slate["950"]),
+
+          "--muted": toRGB(colors.slate["800"]),
+          "--muted-foreground": toRGB(colors.slate["400"])
+        }
+      })
+    })
+  ]
+} satisfies Config
