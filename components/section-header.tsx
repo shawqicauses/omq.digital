@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣
+// DONE REVIEWING: GITHUB COMMIT 2️⃣
 import Image from "next/image"
 
 const SectionHeader = function SectionHeader() {
@@ -11,13 +11,19 @@ const SectionHeader = function SectionHeader() {
         src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
         alt="Section Header Image"
         fill
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
+        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-10"
       />
-      <div className="sm:ring-1/2 hidden sm:absolute sm:-top-10 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-xl-3">
+      <div className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-xl-3">
         <div
           className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-primary to-secondary opacity-20"
           style={{clipPath}}
         />
+        <div className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-xl-3 sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu">
+          <div
+            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-primary to-secondary opacity-20"
+            style={{clipPath}}
+          />
+        </div>
       </div>
     </div>
   )
