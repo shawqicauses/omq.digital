@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣
+// DONE REVIEWING: GITHUB COMMIT 2️⃣
 
 /* eslint import/no-extraneous-dependencies: "off" */
 
@@ -267,15 +267,15 @@ export default {
           "--ring": toRGB(colors.slate["400"]),
           "--input": toRGB(colors.slate["200"]),
 
-          "--primary": toRGB(colors.red["500"]),
-          "--primary-light": toRGB(colors.red["400"]),
-          "--primary-dark": toRGB(colors.red["600"]),
-          "--primary-foreground": toRGB(colors.red["50"]),
+          "--primary": toRGB(colors.violet["500"]),
+          "--primary-light": toRGB(colors.violet["400"]),
+          "--primary-dark": toRGB(colors.violet["600"]),
+          "--primary-foreground": toRGB(colors.violet["50"]),
 
-          "--secondary": toRGB(colors.indigo["500"]),
-          "--secondary-light": toRGB(colors.indigo["400"]),
-          "--secondary-dark": toRGB(colors.indigo["600"]),
-          "--secondary-foreground": toRGB(colors.indigo["50"]),
+          "--secondary": toRGB(colors.blue["500"]),
+          "--secondary-light": toRGB(colors.blue["400"]),
+          "--secondary-dark": toRGB(colors.blue["600"]),
+          "--secondary-foreground": toRGB(colors.blue["50"]),
 
           "--accent": toRGB(colors.slate["900"]),
           "--accent-light": toRGB(colors.slate["800"]),
@@ -294,15 +294,15 @@ export default {
           "--ring": toRGB(colors.slate["300"]),
           "--input": toRGB(colors.slate["800"]),
 
-          "--primary": toRGB(colors.red["400"]),
-          "--primary-light": toRGB(colors.red["300"]),
-          "--primary-dark": toRGB(colors.red["500"]),
-          "--primary-foreground": toRGB(colors.red["950"]),
+          "--primary": toRGB(colors.violet["400"]),
+          "--primary-light": toRGB(colors.violet["300"]),
+          "--primary-dark": toRGB(colors.violet["500"]),
+          "--primary-foreground": toRGB(colors.violet["950"]),
 
-          "--secondary": toRGB(colors.indigo["400"]),
-          "--secondary-light": toRGB(colors.indigo["300"]),
-          "--secondary-dark": toRGB(colors.indigo["500"]),
-          "--secondary-foreground": toRGB(colors.indigo["950"]),
+          "--secondary": toRGB(colors.blue["400"]),
+          "--secondary-light": toRGB(colors.blue["300"]),
+          "--secondary-dark": toRGB(colors.blue["500"]),
+          "--secondary-foreground": toRGB(colors.blue["950"]),
 
           "--accent": toRGB(colors.slate["50"]),
           "--accent-light": toRGB(colors.white),
