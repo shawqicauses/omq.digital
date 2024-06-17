@@ -1,6 +1,6 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT 1️⃣
 import {Fragment} from "react"
-import {Container, SectionHeader} from "../../components/index"
+import {Container, PortfolioList, SectionHeader} from "../../components/index"
 
 const PortfolioPage = function PortfolioPage() {
   return (
@@ -9,7 +9,9 @@ const PortfolioPage = function PortfolioPage() {
         title="Portfolio"
         description="Discover our latest projects and see how we can help you achieve your goals and drive your business forward with our expert solutions."
       />
-      <Container>Portfolio</Container>
+      <Container>
+        <PortfolioList />
+      </Container>
     </Fragment>
   )
 }
