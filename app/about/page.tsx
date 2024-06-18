@@ -1,4 +1,12 @@
-// DONE REVIEWING: GITHUB COMMIT 3️⃣
+// DONE REVIEWING: GITHUB COMMIT 4️⃣
+
+const stats = [
+  {id: 0, label: "Business was founded", value: "2018"},
+  {id: 1, label: "People on our team", value: ["+", "10"].join("")},
+  {id: 2, label: "Users on our platform", value: ["250", "K"].join("")},
+  {id: 3, label: "Paid out to creators", value: ["$", "10", "M"].join("")}
+]
+
 const AboutPage = function AboutPage() {
   const clipPath =
     "polygon(73% 51%, 91% 11%, 100% 46%, 97% 82%, 92% 84%, 75% 64%, 75% 64%, 55% 47%, 46% 49%, 45% 62%, 50% 87%, 21% 64%, 0% 100%, 5% 51%, 21% 63%, 58% 0%, 73% 51%)"
