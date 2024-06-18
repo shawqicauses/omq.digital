@@ -1,5 +1,13 @@
-// DONE REVIEWING: GITHUB COMMIT 7️⃣
+// DONE REVIEWING: GITHUB COMMIT 8️⃣
 
+import {
+  AcademicCapIcon,
+  HandRaisedIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  SunIcon,
+  UserGroupIcon
+} from "@heroicons/react/20/solid"
 import Image from "next/image"
 
 const stats = [
@@ -7,6 +15,45 @@ const stats = [
   {id: 1, label: "People on our team", value: ["+", "10"].join("")},
   {id: 2, label: "Users on our platform", value: ["250", "K"].join("")},
   {id: 3, label: "Paid out to creators", value: ["$", "10", "M"].join("")}
+]
+
+const values = [
+  {
+    id: 0,
+    name: "Be world-class.",
+    description: "We have a team of highly skilled developers who are passionate about their work.",
+    icon: RocketLaunchIcon
+  },
+  {
+    id: 1,
+    name: "Take responsibility.",
+    description: "We take responsibility for our work when it comes to quality and performance.",
+    icon: HandRaisedIcon
+  },
+  {
+    id: 2,
+    name: "Be supportive.",
+    description: "We are always looking for ways to improve our services and support our users.",
+    icon: UserGroupIcon
+  },
+  {
+    id: 3,
+    name: "Always learning.",
+    description: "We stay up-to-date with the latest technologies and trends in the industry.",
+    icon: AcademicCapIcon
+  },
+  {
+    id: 4,
+    name: "Share everything you know.",
+    description: "We believe in the power of open collaboration to build a better future.",
+    icon: SparklesIcon
+  },
+  {
+    id: 5,
+    name: "Enjoy down-time",
+    description: "We enjoy being part of a team that is always learning and growing.",
+    icon: SunIcon
+  }
 ]
 
 const AboutPage = function AboutPage() {
