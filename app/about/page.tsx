@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 6️⃣
+// DONE REVIEWING: GITHUB COMMIT 7️⃣
 
 import Image from "next/image"
 
@@ -20,7 +20,7 @@ const AboutPage = function AboutPage() {
         aria-hidden="true"
         className="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-xl-3">
         <div
-          className="aspect-[1108/632] w-[69.25rem] flex-none transform-gpu from-primary to-secondary opacity-25"
+          className="aspect-[1108/632] w-[69.25rem] flex-none transform-gpu bg-gradient-to-r from-primary to-secondary opacity-25"
           style={{clipPath}}
         />
       </div>
