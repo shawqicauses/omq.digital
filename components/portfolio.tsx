@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣0️⃣
+// DONE REVIEWING: GITHUB COMMIT 1️⃣1️⃣
 
 import PortfolioList from "./portfolio-list"
 
@@ -33,10 +33,10 @@ const Portfolio = function Portfolio() {
       <div className="mx-auto max-w-xl-7 xl:px-8">
         <div className="mx-auto max-w-xl-2 px-6 sm:px-0 lg:text-center">
           <h2 className="text-base font-medium leading-7 text-primary">Portfolio</h2>
-          <p className="mt-2 text-xl-3 font-bold tracking-tight text-white sm:text-xl-4">
+          <p className="mt-2 text-xl-3 font-bold tracking-tight text-foreground sm:text-xl-4">
             Our Work Always Speaks for Itself
           </p>
-          <p className="mt-6 text-lg leading-8 text-slate-400">
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
             Explore our portfolio to see the diverse range of projects we have successfully
             delivered for our clients.
           </p>
