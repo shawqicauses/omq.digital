@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣1️⃣
+// DONE REVIEWING: GITHUB COMMIT 1️⃣2️⃣
 
 import {
   AcademicCapIcon,
@@ -191,6 +191,19 @@ const AboutPage = function AboutPage() {
             </div>
           ))}
         </dl>
+      </div>
+
+      {/* Team */}
+      <div className="mx-auto mt-32 max-w-xl-7 px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-xl-2 lg:mx-0">
+          <h2 className="text-xl-3 font-bold tracking-tight text-foreground sm:text-xl-4">
+            Our Team
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            Introducing our dedicated team of experts who are passionate about what they do. Our
+            team is committed to delivering top-notch solutions.
+          </p>
+        </div>
       </div>
     </main>
   )
