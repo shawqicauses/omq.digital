@@ -1,4 +1,6 @@
-// DONE REVIEWING: GITHUB COMMIT 5️⃣
+// DONE REVIEWING: GITHUB COMMIT 6️⃣
+
+import Image from "next/image"
 
 const stats = [
   {id: 0, label: "Business was founded", value: "2018"},
@@ -81,6 +83,16 @@ const AboutPage = function AboutPage() {
             ))}
           </dl>
         </div>
+      </div>
+
+      {/* Image */}
+      <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-xl-7 xl:px-8">
+        <Image
+          src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5"
+          alt="About OMQ"
+          fill
+          className="!static aspect-[9/4] w-full object-cover xl:rounded-xl"
+        />
       </div>
     </main>
   )
