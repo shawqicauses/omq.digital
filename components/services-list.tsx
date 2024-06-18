@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣
+// DONE REVIEWING: GITHUB COMMIT 2️⃣
 
 import {ElementType} from "react"
 
@@ -17,13 +17,15 @@ const ServicesList = function ServicesList({services}: ServicesListProps) {
       <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 md:max-w-none md:grid-cols-2 md:gap-y-16">
         {services.map((service) => (
           <div key={service.id} className="relative pl-16">
-            <dt className="text-base font-semi-bold leading-7 text-white">
-              <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary shadow-xl shadow-violet-500/20">
-                <service.icon aria-hidden="true" className="h-6 w-6 text-white" />
+            <dt className="text-base font-semi-bold leading-7 text-foreground">
+              <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary shadow-xl shadow-primary/20">
+                <service.icon aria-hidden="true" className="h-6 w-6 text-foreground" />
               </div>
               {service.title}
             </dt>
-            <dd className="mt-2 text-base leading-7 text-slate-400">{service.description}</dd>
+            <dd className="mt-2 text-base leading-7 text-muted-foreground">
+              {service.description}
+            </dd>
           </div>
         ))}
       </dl>
