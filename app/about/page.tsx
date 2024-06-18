@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 4️⃣
+// DONE REVIEWING: GITHUB COMMIT 5️⃣
 
 const stats = [
   {id: 0, label: "Business was founded", value: "2018"},
@@ -68,6 +68,18 @@ const AboutPage = function AboutPage() {
               </p>
             </div>
           </div>
+          <dl className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-4">
+            {stats.map((element) => (
+              <div
+                key={element.id}
+                className="flex flex-col-reverse gap-y-3 border-l border-border pl-6">
+                <dt className="text-base leading-7 text-muted-foreground">{element.label}</dt>
+                <dd className="text-xl-3 font-semi-bold tracking-tight text-foreground">
+                  {element.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </main>
