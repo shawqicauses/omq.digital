@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 3️⃣
+// DONE REVIEWING: GITHUB COMMIT 4️⃣
 
 import Image from "next/image"
 
@@ -23,7 +23,7 @@ const PortfolioList = function PortfolioList({portfolios}: PortfolioListProps) {
   }
 
   return (
-    <div className="my-32 flex w-full flex-col gap-20 xl:gap-24">
+    <div className="my-32 mb-0 flex w-full flex-col gap-20 xl:mb-32 xl:gap-24">
       {portfolios.map((portfolio) => (
         <div
           key={portfolio.id}
