@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣0️⃣
+// DONE REVIEWING: GITHUB COMMIT 1️⃣1️⃣
 
 import {
   AcademicCapIcon,
@@ -53,6 +53,30 @@ const values = [
     name: "Enjoy down-time",
     description: "We enjoy being part of a team that is always learning and growing.",
     icon: SunIcon
+  }
+]
+
+const teams = [
+  {
+    id: 0,
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    name: "Eng. Obaida AL-Anzi",
+    role: "CEO / Founder",
+    location: "Bahrain"
+  },
+  {
+    id: 1,
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    name: "Eng. Khalil",
+    role: "Back-End Developer",
+    location: "Bahrain"
+  },
+  {
+    id: 2,
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    name: "Shawqi Hatem",
+    role: "Front-End Developer",
+    location: "Gaza - Palestine"
   }
 ]
 
