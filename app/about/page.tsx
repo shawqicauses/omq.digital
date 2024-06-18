@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣2️⃣
+// DONE REVIEWING: GITHUB COMMIT 1️⃣3️⃣
 
 import {
   AcademicCapIcon,
@@ -194,7 +194,7 @@ const AboutPage = function AboutPage() {
       </div>
 
       {/* Team */}
-      <div className="mx-auto mt-32 max-w-xl-7 px-6 sm:mt-40 lg:px-8">
+      <div className="mx-auto my-32 max-w-xl-7 px-6 sm:my-40 lg:px-8">
         <div className="mx-auto max-w-xl-2 lg:mx-0">
           <h2 className="text-xl-3 font-bold tracking-tight text-foreground sm:text-xl-4">
             Our Team
@@ -204,6 +204,23 @@ const AboutPage = function AboutPage() {
             team is committed to delivering top-notch solutions.
           </p>
         </div>
+        <ul className="mx-auto mt-20 grid max-w-xl-2 grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
+          {teams.map((element) => (
+            <li key={element.id}>
+              <Image
+                src={element.image}
+                alt={element.name}
+                fill
+                className="!static aspect-[14/13] !h-auto w-full rounded-xl-2 object-cover"
+              />
+              <h3 className="mt-6 text-lg font-semi-bold leading-8 tracking-tight text-foreground">
+                {element.name}
+              </h3>
+              <p className="text-base leading-7 text-muted-foreground">{element.role}</p>
+              <p className="text-xs leading-6 text-primary">{element.location}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </main>
   )
