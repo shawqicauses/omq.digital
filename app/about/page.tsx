@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 9️⃣
+// DONE REVIEWING: GITHUB COMMIT 1️⃣0️⃣
 
 import {
   AcademicCapIcon,
@@ -65,7 +65,7 @@ const AboutPage = function AboutPage() {
       {/* Background */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-xl-3">
+        className="fixed inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-xl-3">
         <div
           className="aspect-[1108/632] w-[69.25rem] flex-none transform-gpu bg-gradient-to-r from-primary to-secondary opacity-25"
           style={{clipPath}}
@@ -153,6 +153,20 @@ const AboutPage = function AboutPage() {
             transformation and engagement with their customers.
           </p>
         </div>
+        <dl className="mx-auto mt-16 grid max-w-xl-2 grid-cols-1 gap-8 text-base leading-7 text-muted-foreground sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
+          {values.map((element) => (
+            <div key={element.id} className="relative pl-9">
+              <dt className="inline font-semi-bold text-foreground">
+                <element.icon
+                  aria-hidden="true"
+                  className="absolute left-1 top-1 h-5 w-5 text-primary"
+                />
+                {element.name}
+              </dt>{" "}
+              <dd className="inline">{element.description}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </main>
   )
