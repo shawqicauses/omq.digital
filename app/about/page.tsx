@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣3️⃣
+// DONE REVIEWING: GITHUB COMMIT 1️⃣4️⃣
 
 import {
   AcademicCapIcon,
@@ -112,7 +112,7 @@ const AboutPage = function AboutPage() {
       {/* Content */}
       <div className="mx-auto mt-20 max-w-xl-7 px-6 lg:px-8">
         <div className="mx-auto max-w-xl-2 lg:mx-0 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 text-justify text-base leading-7 text-muted-foreground lg:max-w-none lg:grid-cols-2">
+          <div className="mx-auto grid max-w-xl grid-cols-1 gap-8 text-justify text-base leading-7 text-muted-foreground lg:max-w-none lg:grid-cols-2">
             <div>
               <p>
                 We create stunning, responsive websites that provide an intuitive user experience.
