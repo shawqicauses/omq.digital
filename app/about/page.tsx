@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 8️⃣
+// DONE REVIEWING: GITHUB COMMIT 9️⃣
 
 import {
   AcademicCapIcon,
@@ -140,6 +140,19 @@ const AboutPage = function AboutPage() {
           fill
           className="!static aspect-[9/4] w-full object-cover xl:rounded-xl"
         />
+      </div>
+
+      {/* Values */}
+      <div className="mx-auto mt-32 max-w-xl-7 px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-xl-2 lg:mx-0">
+          <h2 className="text-xl-3 font-bold tracking-tight text-foreground sm:text-xl-4">
+            Our Values
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            OMQ is a platform that helps small businesses grow and succeed through digital
+            transformation and engagement with their customers.
+          </p>
+        </div>
       </div>
     </main>
   )
