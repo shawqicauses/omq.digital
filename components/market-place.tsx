@@ -1,10 +1,11 @@
-// DONE REVIEWING: GITHUB COMMIT 5️⃣
+// DONE REVIEWING: GITHUB COMMIT 6️⃣
 import {
   BuildingStorefrontIcon,
   CreditCardIcon,
   WrenchScrewdriverIcon
 } from "@heroicons/react/20/solid"
 import Image from "next/image"
+import Container from "./container"
 
 const features = [
   {
@@ -26,8 +27,8 @@ const features = [
 
 const MarketPlace = function MarketPlace() {
   return (
-    <div className="bg-slate-950 py-24">
-      <div className="mx-auto max-w-xl-7 px-6 lg:px-8">
+    <div className="bg-slate-950 pt-24 sm:pt-32">
+      <Container>
         <div className="relative isolate overflow-hidden">
           <div className="mx-auto grid max-w-xl-2 grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
             <div className="lg:row-start-2 lg:max-w-md">
@@ -64,7 +65,7 @@ const MarketPlace = function MarketPlace() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 5️⃣
+// DONE REVIEWING: GITHUB COMMIT 6️⃣
 
 import {
   ChartBarIcon,
@@ -6,6 +6,7 @@ import {
   DevicePhoneMobileIcon,
   SwatchIcon
 } from "@heroicons/react/24/solid"
+import Container from "./container"
 import ServicesList from "./services-list"
 
 export const services = [
@@ -41,8 +42,8 @@ export const services = [
 
 const Services = function Services() {
   return (
-    <div className="py-24 sm:py-32">
-      <div className="mx-auto max-w-xl-7 px-6 lg:px-8">
+    <div className="pt-24 sm:pt-32">
+      <Container>
         <div className="mx-auto max-w-xl-2 lg:text-center">
           <h2 className="text-base font-medium leading-7 text-primary">Services</h2>
           <p className="mt-2 text-xl-3 font-bold tracking-tight text-white sm:text-xl-4">
@@ -54,7 +55,7 @@ const Services = function Services() {
           </p>
         </div>
         <ServicesList services={services} />
-      </div>
+      </Container>
     </div>
   )
 }

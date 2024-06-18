@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 9️⃣
+// DONE REVIEWING: GITHUB COMMIT 1️⃣0️⃣
 
 import PortfolioList from "./portfolio-list"
 
@@ -29,7 +29,7 @@ export const portfolios = [
 
 const Portfolio = function Portfolio() {
   return (
-    <div className="py-24 sm:py-32">
+    <div className="pt-24 sm:pt-32">
       <div className="mx-auto max-w-xl-7 xl:px-8">
         <div className="mx-auto max-w-xl-2 px-6 sm:px-0 lg:text-center">
           <h2 className="text-base font-medium leading-7 text-primary">Portfolio</h2>
