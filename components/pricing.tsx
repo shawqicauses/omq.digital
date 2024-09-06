@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 6️⃣
+// DONE REVIEWING: GITHUB COMMIT - 7
 
 import {CheckIcon} from "@heroicons/react/20/solid"
 import Link from "next/link"
@@ -43,7 +43,7 @@ const Pricing = function Pricing() {
     "polygon(74% 44%, 100% 61%, 97% 26%, 85% 0%, 80% 2%, 72% 32%, 60% 62%, 52% 68%, 47% 58%, 45% 34%, 27% 76%, 0% 64%, 17% 100%, 27% 76%, 76% 97%, 74% 44%)"
 
   return (
-    <div className="relative isolate bg-background px-6 py-24 sm:py-32 lg:px-8">
+    <div className="relative isolate px-6 py-24 sm:py-32 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-xl-3">

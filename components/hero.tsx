@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 4️⃣
+// DONE REVIEWING: GITHUB COMMIT - 5
 
 import {ChevronRightIcon} from "@heroicons/react/24/outline"
 import Image from "next/image"
@@ -22,17 +22,18 @@ const Hero = function Hero() {
         src="/assets/hero-image.webp"
         alt="Company Stuff"
         fill
-        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-10 grayscale"
+        className="absolute inset-0 z-10 h-full w-full object-cover grayscale"
       />
+      <div className="absolute inset-0 z-20 bg-background opacity-90" />
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-xl-3 sm:-top-80">
+        className="absolute inset-x-0 -top-40 z-30 transform-gpu overflow-hidden blur-xl-3 sm:-top-80">
         <div
           className={`relative left-[calc(${classes.calc[1].base})] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-secondary opacity-20 sm:left-[calc(${classes.calc[1].sm})] sm:w-[72.1875rem]`}
           style={{clipPath: classes.clipPath}}
         />
       </div>
-      <div className="mx-auto max-w-xl-2 py-32 sm:py-48 lg:py-56">
+      <div className="relative z-40 mx-auto max-w-xl-2 py-32 sm:py-48 lg:py-56">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="shc-flex-center shc-transition relative gap-2 rounded-full bg-border bg-opacity-30 px-3 py-1 text-sm leading-6 text-muted-foreground ring-1 ring-border backdrop-blur-lg !transition-all hover:ring-foreground">
             Announcing our last out-standing project.

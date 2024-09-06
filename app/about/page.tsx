@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣4️⃣
+// DONE REVIEWING: GITHUB COMMIT - 15
 
 import {
   AcademicCapIcon,
@@ -217,7 +217,6 @@ const AboutPage = function AboutPage() {
                 {element.name}
               </h3>
               <p className="text-base leading-7 text-muted-foreground">{element.role}</p>
-              <p className="text-xs leading-6 text-primary">{element.location}</p>
             </li>
           ))}
         </ul>
