@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT 2️⃣
+// DONE REVIEWING: GITHUB COMMIT - 03
 
 import {Dialog, DialogPanel} from "@headlessui/react"
 import {Bars3Icon, ChevronRightIcon, XMarkIcon} from "@heroicons/react/24/outline"
@@ -21,10 +21,10 @@ const Logo = function Logo() {
     <Link href="/" className="-m-1.5 p-1.5">
       <span className="sr-only">OMQ Solutions</span>
       <Image
-        src="/assets/omq-logo-white.png"
+        src="/assets/logo-edited.png"
         alt="OMQ Solutions Logo White"
         fill
-        className="!static !h-12 !w-auto"
+        className="!static !h-24 !w-auto"
       />
     </Link>
   )
@@ -33,8 +33,10 @@ const Logo = function Logo() {
 const Navigation = function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
-      <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
+    <header
+      className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/20"
+      style={{backdropFilter: "blur(0.5rem)"}}>
+      <nav aria-label="Global" className="flex items-center justify-between px-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Logo />
         </div>
@@ -61,7 +63,7 @@ const Navigation = function Navigation() {
           <Link
             href="/contact"
             className="shc-flex-center shc-label-base shc-transition gap-2 text-white hover:text-violet-400">
-            Hire us <ChevronRightIcon aria-hidden="true" className="h-5 w-5" />
+            Request Service <ChevronRightIcon aria-hidden="true" className="h-5 w-5" />
           </Link>
         </div>
       </nav>
@@ -85,6 +87,7 @@ const Navigation = function Navigation() {
                   <Link
                     key={element.href}
                     href={element.href}
+                    onClick={() => setMobileMenuOpen(false)}
                     className="shc-label-base shc-transition -mx-3 block rounded-lg px-3 py-2 text-base text-white hover:bg-slate-900">
                     {element.name}
                   </Link>
@@ -94,7 +97,7 @@ const Navigation = function Navigation() {
                 <Link
                   href="/contact"
                   className="shc-label-base shc-transition flex w-full items-center justify-between gap-2 rounded-lg py-2 text-base text-white hover:bg-slate-900">
-                  Hire us <ChevronRightIcon aria-hidden="true" className="h-5 w-5" />
+                  Request Service <ChevronRightIcon aria-hidden="true" className="h-5 w-5" />
                 </Link>
               </div>
             </div>
