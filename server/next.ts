@@ -1,7 +1,7 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT 1️⃣
 import next from "next"
 
-export const dev = process.env.NODE_ENV === "production"
+export const dev = process.env.NODE_ENV !== "production"
 export const port = Number(process.env.PORT) || 3000
 
 export const nextApplication = next({dev, port})
