@@ -1,5 +1,5 @@
 {
-  "reviewed": "true 5️⃣",
+  "reviewed": "true 6️⃣",
   "version": "1.0.0",
   "name": "omq.digital",
   "description": "A website for OMQ Solutions Agency (omq.digital) built using Next.JS, TypeScript and Tailwind CSS. Developed by @shawqicauses.",
@@ -23,9 +23,11 @@
     "@tailwindcss/forms": "0.5.7",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
+    "dotenv": "16.4.5",
     "lucide-react": "0.378.0",
     "next": "14.2.3",
     "next-themes": "0.3.0",
+    "payload": "2.28.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-hook-form": "7.51.4",
