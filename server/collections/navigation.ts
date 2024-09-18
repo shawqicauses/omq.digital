@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT 1️⃣
 import {CollectionConfig} from "payload/types"
 
 const navigationCollection: CollectionConfig = {
@@ -20,8 +20,7 @@ const navigationCollection: CollectionConfig = {
       label: {en: "URL", ar: "الرابط"},
       type: "text",
       name: "href",
-      required: true,
-      localized: true
+      required: true
     }
   ]
 }
