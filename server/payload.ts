@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT 1️⃣
 import dotenv from "dotenv"
 import path from "path"
 import payload, {type Payload} from "payload"
@@ -11,7 +11,7 @@ let cached = (global as any).payload
 if (!cached) cached = (global as any).payload = {client: null, promise: null}
 
 interface Params {
-  initOptions?: InitOptions
+  initOptions?: Partial<InitOptions>
 }
 
 const initPayload = async function initPayload({initOptions}: Params = {}): Promise<Payload> {
