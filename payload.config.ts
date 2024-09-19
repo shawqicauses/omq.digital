@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 1️⃣
+// DONE REVIEWING: GITHUB COMMIT 2️⃣
 import {viteBundler} from "@payloadcms/bundler-vite"
 import {mongooseAdapter} from "@payloadcms/db-mongodb"
 import {lexicalEditor} from "@payloadcms/richtext-lexical"
@@ -18,7 +18,7 @@ const config = buildConfig({
   localization: {
     locales: [
       {label: {en: "English", ar: "الإنجليزية"}, code: "en"},
-      {label: {en: "Arabic", ar: "العربية"}, code: "ar"}
+      {label: {en: "Arabic", ar: "العربية"}, code: "ar", rtl: true}
     ],
     defaultLocale: "en",
     fallback: true
