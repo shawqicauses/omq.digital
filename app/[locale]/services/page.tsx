@@ -1,7 +1,7 @@
-// DONE REVIEWING: GITHUB COMMIT 5️⃣
+// DONE REVIEWING: GITHUB COMMIT - 06
 import {Fragment} from "react"
-import {Container, SectionHeader, ServicesList} from "../../components/index"
-import {services} from "../../components/services"
+import {Container, SectionHeader, ServicesList} from "../../../components/index"
+import {services} from "../../../components/services"
 
 const ServicesPage = function ServicesPage() {
   return (
