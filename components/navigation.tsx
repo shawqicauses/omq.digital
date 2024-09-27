@@ -1,19 +1,22 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 03
+// DONE REVIEWING: GITHUB COMMIT - 04
 
+import {Link} from "@/i18n/routing"
+import {cn} from "@/lib/utils"
 import {Dialog, DialogPanel} from "@headlessui/react"
 import {Bars3Icon, ChevronRightIcon, XMarkIcon} from "@heroicons/react/24/outline"
+import {useTranslations} from "next-intl"
 import Image from "next/image"
-import Link from "next/link"
 import {useState} from "react"
+import {Button} from "./ui"
 
 const navigation = [
-  {name: "Home", href: "/"},
-  {name: "About", href: "/about"},
-  {name: "Services", href: "/services"},
-  {name: "Portfolio", href: "/portfolio"},
-  {name: "Contact", href: "/contact"}
+  {name: "home", href: "/"},
+  {name: "about", href: "/about"},
+  {name: "services", href: "/services"},
+  {name: "portfolio", href: "/portfolio"},
+  {name: "contact", href: "/contact"}
 ]
 
 const Logo = function Logo() {
@@ -30,8 +33,10 @@ const Logo = function Logo() {
   )
 }
 
-const Navigation = function Navigation() {
+const Navigation = function Navigation({locale}: {locale: string}) {
+  const t = useTranslations()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <header
       className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/20"
@@ -55,15 +60,24 @@ const Navigation = function Navigation() {
               key={element.href}
               href={element.href}
               className="shc-label-base shc-transition text-white hover:text-violet-400">
-              {element.name}
+              {t(`navigation.${element.name}`)}
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-5">
+          <Button variant="outline" size="sm" asChild>
+            <Link href="/" locale={locale === "en" ? "ar" : "en"}>
+              {t(locale === "en" ? "languages.ar" : "languages.en")}
+            </Link>
+          </Button>
           <Link
             href="/contact"
             className="shc-flex-center shc-label-base shc-transition gap-2 text-white hover:text-violet-400">
-            Request Service <ChevronRightIcon aria-hidden="true" className="h-5 w-5" />
+            {t("navigation.request-service")}{" "}
+            <ChevronRightIcon
+              aria-hidden="true"
+              className={cn("h-5 w-5", locale === "ar" ? "rotate-180" : "")}
+            />
           </Link>
         </div>
       </nav>
@@ -89,16 +103,25 @@ const Navigation = function Navigation() {
                     href={element.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className="shc-label-base shc-transition -mx-3 block rounded-lg px-3 py-2 text-base text-white hover:bg-slate-900">
-                    {element.name}
+                    {t(`navigation.${element.name}`)}
                   </Link>
                 ))}
               </div>
               <div className="py-6">
                 <Link
                   href="/contact"
-                  className="shc-label-base shc-transition flex w-full items-center justify-between gap-2 rounded-lg py-2 text-base text-white hover:bg-slate-900">
-                  Request Service <ChevronRightIcon aria-hidden="true" className="h-5 w-5" />
+                  className="shc-label-base shc-transition mb-3 flex w-full items-center justify-between gap-2 rounded-lg py-2 text-base text-white hover:bg-slate-900">
+                  {t("navigation.request-service")}{" "}
+                  <ChevronRightIcon
+                    aria-hidden="true"
+                    className={cn("h-5 w-5", locale === "ar" ? "rotate-180" : "")}
+                  />
                 </Link>
+                <Button variant="outline" className="w-full" asChild>
+                  <Link href="/" locale={locale === "en" ? "ar" : "en"}>
+                    {t(locale === "en" ? "languages.ar" : "languages.en")}
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
