@@ -1,5 +1,5 @@
-// DONE REVIEWING: GITHUB COMMIT 2️⃣
-import {viteBundler} from "@payloadcms/bundler-vite"
+// DONE REVIEWING: GITHUB COMMIT 3️⃣
+import {webpackBundler} from "@payloadcms/bundler-webpack"
 import {mongooseAdapter} from "@payloadcms/db-mongodb"
 import {lexicalEditor} from "@payloadcms/richtext-lexical"
 import dotenv from "dotenv"
@@ -11,7 +11,7 @@ dotenv.config({path: path.resolve(__dirname, ".env")})
 
 const config = buildConfig({
   serverURL: process.env.NEXT_PUBLIC_SERVER_URL,
-  admin: {bundler: viteBundler()},
+  admin: {bundler: webpackBundler()},
   db: mongooseAdapter({url: process.env.DATABASE_URL}),
   typescript: {outputFile: path.resolve(__dirname, "payload-types.ts")},
   editor: lexicalEditor(),
