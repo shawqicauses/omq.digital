@@ -1,6 +1,33 @@
 {
-  "reviewed": true,
-  "buttons": {
+  "reviewed": "true - 01",
+  "languages": {
+    "en": "English",
+    "ar": "Arabic"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
     "request-service": "Request Service"
+  },
+  "home-page": {
+    "header": {
+      "title": "Between imagination and creativity, you find us with you.",
+      "description": "OMQ digital solutions is your trusted partner in innovative web development, seam-less digital marketing, and cutting-edge technology solutions.",
+      "buttons": {
+        "company-profile": "Company Profile",
+        "about-us": "About Us"
+      }
+    },
+    "services": {
+      "headline": "Discover OMQ Services",
+      "title": "What will we offer you at OMQ?",
+      "quote": "If your business doesn't have an online presence, it will disappear from the business list - Bill Gates",
+      "buttons": {
+        "all-services": "All Services"
+      }
+    }
   }
 }
