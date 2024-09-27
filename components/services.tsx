@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 7️⃣
+// DONE REVIEWING: GITHUB COMMIT - 08
 
 import {
   ChartBarIcon,
@@ -6,6 +6,7 @@ import {
   DevicePhoneMobileIcon,
   SwatchIcon
 } from "@heroicons/react/24/solid"
+import {useTranslations} from "next-intl"
 import Container from "./container"
 import ServicesList from "./services-list"
 
@@ -41,18 +42,16 @@ export const services = [
 ]
 
 const Services = function Services() {
+  const t = useTranslations("home-page.services")
   return (
     <div className="pt-24 sm:pt-32">
       <Container>
         <div className="mx-auto max-w-xl-2 lg:text-center">
-          <h2 className="text-base font-medium leading-7 text-primary">Services</h2>
+          <h2 className="text-base font-medium leading-7 text-primary">{t("headline")}</h2>
           <p className="mt-2 text-xl-3 font-bold tracking-tight text-foreground sm:text-xl-4">
-            Transforming Your Digital Presence
+            {t("title")}
           </p>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            OMQ Solutions offers services to elevate your brand and drive your business forward.
-            Discover how we can help you achieve your goals.
-          </p>
+          <p className="mt-6 text-lg italic leading-8 text-muted-foreground">{t("quote")}</p>
         </div>
         <ServicesList services={services} />
       </Container>
