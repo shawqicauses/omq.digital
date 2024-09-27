@@ -1,11 +1,13 @@
-// DONE REVIEWING: GITHUB COMMIT - 5
+// DONE REVIEWING: GITHUB COMMIT - 06
 
-import {ChevronRightIcon} from "@heroicons/react/24/outline"
+import {cn} from "@/lib/utils"
+import {useTranslations} from "next-intl"
 import Image from "next/image"
 import Link from "next/link"
 import {Button} from "./ui"
 
-const Hero = function Hero() {
+const Hero = function Hero({locale}: {locale: string}) {
+  const t = useTranslations("home-page")
   const classes = {
     calc: {
       1: {base: ["50%", "11rem"].join("-"), sm: ["50%", "30rem"].join("-")},
@@ -33,36 +35,27 @@ const Hero = function Hero() {
           style={{clipPath: classes.clipPath}}
         />
       </div>
-      <div className="relative z-40 mx-auto max-w-xl-2 py-32 sm:py-48 lg:py-56">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div className="shc-flex-center shc-transition relative gap-2 rounded-full bg-border bg-opacity-30 px-3 py-1 text-sm leading-6 text-muted-foreground ring-1 ring-border backdrop-blur-lg !transition-all hover:ring-foreground">
-            Announcing our last out-standing project.
-            <Link href="/portfolio" className="shc-flex-center font-medium text-foreground">
-              <span aria-hidden="true" className="absolute inset-0" />
-              View more{" "}
-              <ChevronRightIcon aria-hidden="true" className="h-4 w-4 stroke-2 text-current" />
-            </Link>
-          </div>
-        </div>
+      <div
+        className={cn(
+          "relative z-40 mx-auto py-32 sm:py-48 lg:py-56",
+          locale === "ar" ? "max-w-xl" : "max-w-xl-3"
+        )}>
         <div className="text-center">
-          <h1 className="text-xl-4 font-bold tracking-tight text-foreground sm:text-xl-6">
-            Transforming Digital{" "}
-            <span className="underline decoration-primary decoration-dotted underline-offset-4">
-              Dreams
-            </span>{" "}
-            into Reality
+          <h1
+            className={cn(
+              "!text-xl-4 font-bold text-foreground sm:!text-xl-5 sm:!leading-[3.5rem]",
+              locale === "en" ? "tracking-tight" : ""
+            )}>
+            {t("header.title")}
           </h1>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            OMQ Solutions is your trusted partner in innovative web development, seam-less digital
-            marketing, and cutting-edge technology solutions.
-          </p>
-          <div className="shc-flex-center mt-10 gap-x-6">
+          <p className="mt-4 text-lg leading-8 text-muted-foreground">{t("header.description")}</p>
+          <div className="shc-flex-center mt-8 gap-x-6">
             <Button asChild>
-              <Link href="/contact">Get Started</Link>
+              <Link href="/about">{t("header.buttons.company-profile")}</Link>
             </Button>
             <Button variant="link" asChild>
               <Link href="/about" className="text-foreground">
-                About us
+                {t("header.buttons.about-us")}
               </Link>
             </Button>
           </div>
