@@ -1,4 +1,6 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT - 01
+import {inferAsyncReturnType} from "@trpc/server"
+import * as trpcExpress from "@trpc/server/adapters/express"
 import dotenv from "dotenv"
 import express from "express"
 import path from "path"
@@ -8,6 +10,12 @@ import initPayload from "./server/payload"
 dotenv.config({path: path.resolve(__dirname, ".env")})
 
 const app = express()
+
+const createContext = function createContext({req, res}: trpcExpress.CreateExpressContextOptions) {
+  return {req, res}
+}
+
+export type ExpressContext = inferAsyncReturnType<typeof createContext>
 
 const start = async function start() {
   const payload = await initPayload({
