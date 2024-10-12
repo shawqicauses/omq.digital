@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT - 01
 import {CollectionConfig} from "payload/types"
 
 const MediaCollection: CollectionConfig = {
@@ -26,7 +26,7 @@ const MediaCollection: CollectionConfig = {
         position: "centre"
       },
       {
-        name: "thumbnail-tablet",
+        name: "thumbnail_tablet",
         width: 1024,
         height: undefined,
         position: "centre"

@@ -1,10 +1,11 @@
-// DONE REVIEWING: GITHUB COMMIT - 04
+// DONE REVIEWING: GITHUB COMMIT - 05
 import {webpackBundler} from "@payloadcms/bundler-webpack"
 import {mongooseAdapter} from "@payloadcms/db-mongodb"
 import {lexicalEditor} from "@payloadcms/richtext-lexical"
 import dotenv from "dotenv"
 import path from "path"
 import {buildConfig} from "payload/config"
+import MediaCollection from "./server/collections/media"
 import ServicesCollection from "./server/collections/services"
 
 dotenv.config({path: path.resolve(__dirname, ".env")})
@@ -23,7 +24,7 @@ const config = buildConfig({
     defaultLocale: "en",
     fallback: true
   },
-  collections: [ServicesCollection]
+  collections: [MediaCollection, ServicesCollection]
 })
 
 export default config
