@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 01
+// DONE REVIEWING: GITHUB COMMIT - 02
 import {CollectionConfig} from "payload/types"
 
 const ServicesCollection: CollectionConfig = {
@@ -35,6 +35,14 @@ const ServicesCollection: CollectionConfig = {
       name: "description",
       required: true,
       localized: true
+    },
+    {
+      label: {en: "Icon", ar: "الأيقونة"},
+      type: "upload",
+      relationTo: "media",
+      name: "icon",
+      required: true,
+      localized: false
     }
   ]
 }
