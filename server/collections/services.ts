@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 02
+// DONE REVIEWING: GITHUB COMMIT - 03
 import {CollectionConfig} from "payload/types"
 
 const ServicesCollection: CollectionConfig = {
@@ -8,19 +8,6 @@ const ServicesCollection: CollectionConfig = {
     plural: {en: "Services", ar: "خدمات"}
   },
   admin: {group: {en: "Website Content", ar: "محتوى الموقع"}},
-  upload: {
-    staticURL: "/media",
-    staticDir: "media",
-    mimeTypes: ["image/png", "image/jpeg", "image/svg"],
-    imageSizes: [
-      {
-        name: "icon",
-        width: 24,
-        height: 24,
-        position: "center"
-      }
-    ]
-  },
   fields: [
     {
       label: {en: "Title", ar: "العنوان"},
