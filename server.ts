@@ -1,9 +1,10 @@
-// DONE REVIEWING: GITHUB COMMIT - 01
+// DONE REVIEWING: GITHUB COMMIT - 02
 import {inferAsyncReturnType} from "@trpc/server"
 import * as trpcExpress from "@trpc/server/adapters/express"
 import dotenv from "dotenv"
 import express from "express"
 import path from "path"
+import {appRouter} from "./server/api"
 import {nextApplication, nextRequestHandler, port} from "./server/next"
 import initPayload from "./server/payload"
 
@@ -26,6 +27,14 @@ const start = async function start() {
       }
     }
   })
+
+  app.use(
+    "/api/trpc",
+    trpcExpress.createExpressMiddleware({
+      router: appRouter,
+      createContext
+    })
+  )
 
   app.use((request, response) => nextRequestHandler(request, response))
   nextApplication.prepare().then(() => {
