@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 2️⃣
+// DONE REVIEWING: GITHUB COMMIT - 03
 import {BsFacebook, BsInstagram, BsTwitter} from "react-icons/bs"
 
 const socials = [
@@ -23,7 +23,7 @@ const Footer = function Footer() {
   return (
     <footer className="border-t border-t-muted bg-muted/25">
       <div className="mx-auto max-w-xl-7 px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-        <div className="flex justify-center space-x-6 md:order-2">
+        <div className="flex justify-center gap-x-6 md:order-2">
           {socials.map((social) => (
             <a
               key={social.name}
