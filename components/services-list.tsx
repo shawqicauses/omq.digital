@@ -1,32 +1,38 @@
-// DONE REVIEWING: GITHUB COMMIT 2️⃣
+// DONE REVIEWING: GITHUB COMMIT - 03
 
-import {ElementType} from "react"
+import {Link} from "@/i18n/routing"
+import {Media, Service} from "@/payload-types"
+import Image from "next/image"
 
 type ServicesListProps = {
-  services: {
-    id: number
-    title: string
-    description: string
-    icon: ElementType
-  }[]
+  locale: string
+  services: Service[]
 }
 
 const ServicesList = function ServicesList({services}: ServicesListProps) {
   return (
-    <div className="mx-auto my-16 max-w-xl-2 sm:my-20 lg:my-24 lg:max-w-xl-4">
-      <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 md:max-w-none md:grid-cols-2 md:gap-y-16">
+    <div className="mx-auto my-16 sm:my-20 lg:my-24">
+      <dl className="grid max-w-xl grid-cols-1 gap-8 md:max-w-none md:grid-cols-2 xl:grid-cols-3">
         {services.map((service) => (
-          <div key={service.id} className="relative pl-16">
-            <dt className="text-base font-semi-bold leading-7 text-foreground">
-              <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary shadow-xl shadow-primary/20">
-                <service.icon aria-hidden="true" className="h-6 w-6 text-foreground" />
+          <Link
+            key={service.id}
+            href={`/services/${service.id}`}
+            className="shc-transition relative rounded-lg bg-muted/25 p-5 ring-2 ring-inset ring-muted backdrop-blur-md hover:bg-muted">
+            <dt className="mb-5 flex items-center gap-3 text-base font-semi-bold leading-7 text-foreground">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary shadow-xl shadow-primary/20">
+                <Image
+                  src={`/media/${(service.icon as Media).sizes.icon.filename}`}
+                  alt={service.title}
+                  fill
+                  className="!static !h-6 !w-6"
+                />
               </div>
               {service.title}
             </dt>
             <dd className="mt-2 text-base leading-7 text-muted-foreground">
               {service.description}
             </dd>
-          </div>
+          </Link>
         ))}
       </dl>
     </div>

@@ -1,48 +1,26 @@
-// DONE REVIEWING: GITHUB COMMIT - 08
+"use client"
 
-import {
-  ChartBarIcon,
-  CodeBracketSquareIcon,
-  DevicePhoneMobileIcon,
-  SwatchIcon
-} from "@heroicons/react/24/solid"
+// DONE REVIEWING: GITHUB COMMIT - 09
+
+import trpc from "@/client"
+import {Service} from "@/payload-types"
+import {Loader2Icon} from "lucide-react"
 import {useTranslations} from "next-intl"
 import Container from "./container"
 import ServicesList from "./services-list"
 
-export const services = [
-  {
-    id: 1,
-    title: "Web Development",
-    description:
-      "We create stunning, responsive websites that provide an intuitive user experience. Using the latest technologies, we ensure your site is fast, secure, and scalable.",
-    icon: CodeBracketSquareIcon
-  },
-  {
-    id: 2,
-    title: "Digital Marketing",
-    description:
-      "Boost your online presence with our digital marketing services. We develop strategies that drive traffic, engage your audience, and convert visitors into customers.",
-    icon: ChartBarIcon
-  },
-  {
-    id: 3,
-    title: "Graphic Design",
-    description:
-      "Make a lasting impression with our graphic design solutions. Our designers create visuals that align with your brand and capture attention.",
-    icon: SwatchIcon
-  },
-  {
-    id: 4,
-    title: "App Development",
-    description:
-      "Expand your reach with our custom app development services. We build user-friendly, high-performance mobile and web apps tailored to your business needs.",
-    icon: DevicePhoneMobileIcon
-  }
-]
+const Services = function Services({locale}: {locale: string}) {
+  const {data, isLoading} = trpc.getServices.useQuery({locale})
 
-const Services = function Services() {
+  const services = data?.services.map((service) => ({
+    id: service.id,
+    title: service.title,
+    description: service.description,
+    icon: service.icon
+  }))
+
   const t = useTranslations("home-page.services")
+
   return (
     <div className="pt-24 sm:pt-32">
       <Container>
@@ -53,7 +31,12 @@ const Services = function Services() {
           </p>
           <p className="mt-6 text-lg italic leading-8 text-muted-foreground">{t("quote")}</p>
         </div>
-        <ServicesList services={services} />
+        {(isLoading && (
+          <div className="mt-16 flex items-center justify-center text-primary">
+            <Loader2Icon className="h-10 w-10 animate-spin stroke-current" />
+          </div>
+        )) ||
+          (services && <ServicesList locale={locale} services={services as Service[]} />)}
       </Container>
     </div>
   )
