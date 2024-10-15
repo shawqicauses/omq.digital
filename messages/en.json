@@ -1,5 +1,5 @@
 {
-  "reviewed": "true - 02",
+  "reviewed": "true - 03",
   "languages": {
     "en": "English",
     "ar": "Arabic"
@@ -28,6 +28,24 @@
       "buttons": {
         "all-services": "All Services",
         "service-button": "Read more"
+      }
+    },
+    "whys": {
+      "first": {
+        "title": "Why should OMQ be your first choice?",
+        "data": {
+          "1": "You speak, we listen.",
+          "2": "We value creativity.",
+          "3": "5 years of experience in SEO.",
+          "4": "A fully integrated team.",
+          "5": "We excel in website design.",
+          "6": "We create an innovative world of captivating design.",
+          "7": "We innovate solutions and continuously engage with our clients."
+        }
+      },
+      "second": {
+        "title": "Why we are at OMQ distinguished?",
+        "data": "Our commitment to technical development, digital marketing, and communication with numerous clients makes our company your top choice for achieving your goals."
       }
     }
   }

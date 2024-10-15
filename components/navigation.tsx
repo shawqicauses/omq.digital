@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 05
+// DONE REVIEWING: GITHUB COMMIT - 06
 
 import {Link} from "@/i18n/routing"
 import {cn} from "@/lib/utils"
@@ -38,9 +38,7 @@ const Navigation = function Navigation({locale}: {locale: string}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header
-      className="fixed inset-x-0 top-0 z-50 h-24 border-b border-border bg-background/20"
-      style={{backdropFilter: "blur(0.5rem)"}}>
+    <header className="fixed inset-x-0 top-0 z-50 h-24 border-b border-border bg-background/20 backdrop-blur">
       <nav aria-label="Global" className="flex items-center justify-between px-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Logo />
