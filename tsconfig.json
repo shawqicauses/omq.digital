@@ -1,5 +1,5 @@
 {
-  "reviewed": "true 1️⃣",
+  "reviewed": "true - 01",
   "compilerOptions": {
     "target": "ES5",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -18,6 +18,10 @@
     "plugins": [{"name": "next"}],
     "paths": {"@/*": ["./*"]}
   },
-  "include": [".next/types/**/*.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "transpileOnly": true,
+    "swc": true
+  }
 }
