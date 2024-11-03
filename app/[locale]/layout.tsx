@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 09
+// DONE REVIEWING: GITHUB COMMIT - 10
 import {NextIntlClientProvider} from "next-intl"
 import {getMessages} from "next-intl/server"
 import {Montserrat, Tajawal} from "next/font/google"
@@ -35,19 +35,21 @@ const Layout = async function Layout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className="dark">
       <head />
-      <body className={fonts[locale].className}>
+      <body className={`${fonts[locale].className} relative`}>
         <Providers>
           <Image
             src="/assets/logo-outline.png"
             alt="OMQ Logo"
             fill
-            className="!fixed !bottom-[initial] !left-[initial] !top-1/2 -z-10 !h-auto !w-[70rem] max-w-[70rem] -translate-y-1/2 translate-x-1/2 blur-lg lg:!w-[90rem] lg:max-w-[90rem]"
+            sizes="(max-width: 768px) 100vw, 125vw"
+            className="!fixed !inset-[initial] !top-1/2 hidden !h-auto -translate-y-1/2 blur-lg lg:!-right-[62.5vw] lg:block lg:!w-[125vw] lg:max-w-[125vw] xl:!-right-[50vw] xl:w-[100vw] xl:max-w-[100vw]"
           />
           <Image
             src="/assets/logo-outline.png"
             alt="OMQ Logo"
             fill
-            className="!fixed !bottom-[initial] !left-[initial] !top-1/2 -z-10 !h-auto !w-[70rem] max-w-[70rem] -translate-y-1/2 translate-x-1/2 opacity-60 lg:!w-[90rem] lg:max-w-[90rem]"
+            sizes="(max-width: 768px) 100vw, 125vw"
+            className="!fixed !inset-[initial] !top-1/2 hidden !h-auto -translate-y-1/2 opacity-50 lg:!-right-[62.5vw] lg:block lg:!w-[125vw] lg:max-w-[125vw] xl:!-right-[50vw] xl:w-[100vw] xl:max-w-[100vw]"
           />
           <NextIntlClientProvider messages={messages}>
             <Navigation locale={locale} />
