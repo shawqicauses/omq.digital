@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 01
+// DONE REVIEWING: GITHUB COMMIT - 02
 import {CollectionConfig} from "payload/types"
 
 const MediaCollection: CollectionConfig = {
@@ -7,6 +7,7 @@ const MediaCollection: CollectionConfig = {
     singular: {en: "Media", ar: "وسائط"},
     plural: {en: "Media", ar: "وسائط"}
   },
+  access: {read: () => true},
   admin: {group: {en: "Website Content", ar: "محتوى الموقع"}},
   upload: {
     staticURL: "/media",

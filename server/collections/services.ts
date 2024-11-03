@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 03
+// DONE REVIEWING: GITHUB COMMIT - 04
 import {CollectionConfig} from "payload/types"
 
 const ServicesCollection: CollectionConfig = {
@@ -30,6 +30,70 @@ const ServicesCollection: CollectionConfig = {
       name: "icon",
       required: true,
       localized: false
+    },
+    {
+      label: {en: "Packages", ar: "الباقات"},
+      type: "array",
+      name: "packages",
+      required: false,
+      localized: false,
+      fields: [
+        {
+          label: {en: "Title", ar: "العنوان"},
+          type: "text",
+          name: "title",
+          required: true,
+          localized: true
+        },
+        {
+          label: {en: "Offerings", ar: "العروض"},
+          type: "array",
+          name: "offerings",
+          required: true,
+          localized: false,
+          fields: [
+            {
+              label: {en: "Title", ar: "العنوان"},
+              type: "text",
+              name: "title",
+              required: true,
+              localized: true
+            },
+            {
+              label: {en: "Features", ar: "المميزات"},
+              type: "array",
+              name: "features",
+              required: true,
+              localized: false,
+              fields: [
+                {
+                  label: {en: "Title", ar: "العنوان"},
+                  type: "text",
+                  name: "title",
+                  required: true,
+                  localized: true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      label: {en: "Notes", ar: "الملاحظات"},
+      type: "array",
+      name: "notes",
+      required: false,
+      localized: false,
+      fields: [
+        {
+          label: {en: "Title", ar: "العنوان"},
+          type: "text",
+          name: "title",
+          required: true,
+          localized: true
+        }
+      ]
     }
   ]
 }
