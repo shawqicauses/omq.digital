@@ -1,5 +1,5 @@
 {
-  "reviewed": "true - 03",
+  "reviewed": "true - 04",
   "languages": {
     "en": "English",
     "ar": "Arabic"
@@ -47,6 +47,9 @@
         "title": "Why we are at OMQ distinguished?",
         "data": "Our commitment to technical development, digital marketing, and communication with numerous clients makes our company your top choice for achieving your goals."
       }
+    },
+    "footer": {
+      "paragraph": "OMQ is a digital marketing company and provider of IT and internet services, created to be a creative addition to the digital world, successfully growing its clients and ensuring their satisfaction."
     }
   }
 }
