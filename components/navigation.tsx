@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 06
+// DONE REVIEWING: GITHUB COMMIT - 07
 
 import {Link} from "@/i18n/routing"
 import {cn} from "@/lib/utils"
@@ -8,7 +8,7 @@ import {Dialog, DialogPanel} from "@headlessui/react"
 import {Bars3Icon, ChevronRightIcon, XMarkIcon} from "@heroicons/react/24/outline"
 import {useTranslations} from "next-intl"
 import Image from "next/image"
-import {useState} from "react"
+import {HTMLAttributes, useState} from "react"
 import {Button} from "./ui"
 
 const navigation = [
@@ -19,15 +19,16 @@ const navigation = [
   {name: "contact", href: "/contact"}
 ]
 
-const Logo = function Logo() {
+export const Logo = function Logo({className}: HTMLAttributes<HTMLAnchorElement>) {
   return (
-    <Link href="/" className="-m-1.5 p-1.5">
+    <Link href="/" className="relative -m-1.5 p-1.5">
       <span className="sr-only">OMQ Solutions</span>
       <Image
         src="/assets/logo-edited.png"
         alt="OMQ Solutions Logo White"
         fill
-        className="!static !h-24 !w-auto"
+        sizes="6rem"
+        className={cn("!static !h-24 !w-auto", className)}
       />
     </Link>
   )
