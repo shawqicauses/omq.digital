@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 09
+// DONE REVIEWING: GITHUB COMMIT - 10
 
 import trpc from "@/client"
 import {Service} from "@/payload-types"
@@ -36,7 +36,7 @@ const Services = function Services({locale}: {locale: string}) {
             <Loader2Icon className="h-10 w-10 animate-spin stroke-current" />
           </div>
         )) ||
-          (services && <ServicesList locale={locale} services={services as Service[]} />)}
+          (services && <ServicesList services={services as Service[]} />)}
       </Container>
     </div>
   )

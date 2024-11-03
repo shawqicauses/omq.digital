@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 05
+// DONE REVIEWING: GITHUB COMMIT - 06
 
 import {Link} from "@/i18n/routing"
 import {Media, Service} from "@/payload-types"
@@ -7,7 +7,6 @@ import Image from "next/image"
 import {Button} from "./ui"
 
 type ServicesListProps = {
-  locale: string
   services: Service[]
 }
 
@@ -21,11 +20,12 @@ const ServicesList = function ServicesList({services}: ServicesListProps) {
             key={service.id}
             href={`/services/${service.id}`}
             className="shc-transition relative flex flex-col rounded-md bg-background/10 p-6 ring-2 ring-inset ring-muted backdrop-blur hover:bg-muted">
-            <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-md bg-primary shadow-xl shadow-primary/20">
+            <div className="relative mb-5 flex h-10 w-10 items-center justify-center rounded-md bg-primary shadow-xl shadow-primary/20">
               <Image
-                src={`/media/${(service.icon as Media).sizes.icon.filename}`}
+                src={(service.icon as Media).sizes.icon.url}
                 alt={service.title}
                 fill
+                sizes="1.5rem"
                 className="!static !h-6 !w-6"
               />
             </div>
