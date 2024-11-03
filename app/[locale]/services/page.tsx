@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 07
+// DONE REVIEWING: GITHUB COMMIT - 08
 import trpc from "@/client"
 import {Service} from "@/payload-types"
 import {Loader2Icon} from "lucide-react"
@@ -29,7 +29,7 @@ const ServicesPage = function ServicesPage({params: {locale}}: {params: {locale:
             <Loader2Icon className="h-10 w-10 animate-spin stroke-current" />
           </div>
         )) ||
-          (services && <ServicesList locale={locale} services={services as Service[]} />)}
+          (services && <ServicesList services={services as Service[]} />)}
       </Container>
     </Fragment>
   )
