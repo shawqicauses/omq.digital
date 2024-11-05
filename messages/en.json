@@ -1,5 +1,5 @@
 {
-  "reviewed": "true - 04",
+  "reviewed": "true - 05",
   "languages": {
     "en": "English",
     "ar": "Arabic"
@@ -51,5 +51,8 @@
     "footer": {
       "paragraph": "OMQ is a digital marketing company and provider of IT and internet services, created to be a creative addition to the digital world, successfully growing its clients and ensuring their satisfaction."
     }
+  },
+  "about": {
+    "cta": "Explore our innovative services and packages now, and get outstanding digital solutions to help you achieve your goals and succeed in the business world!"
   }
 }
