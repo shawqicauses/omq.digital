@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 06
+// DONE REVIEWING: GITHUB COMMIT - 07
 import {webpackBundler} from "@payloadcms/bundler-webpack"
 import {mongooseAdapter} from "@payloadcms/db-mongodb"
 import {lexicalEditor} from "@payloadcms/richtext-lexical"
@@ -10,6 +10,7 @@ import ClientsPartnersCollection from "./server/collections/clients-partners"
 import MediaCollection from "./server/collections/media"
 import PortfoliosCollection from "./server/collections/portfolios"
 import ServicesCollection from "./server/collections/services"
+import TeamMembersCollection from "./server/collections/team-members"
 
 dotenv.config({path: path.resolve(__dirname, ".env")})
 
@@ -29,10 +30,11 @@ const config = buildConfig({
   },
   collections: [
     MediaCollection,
+    AboutsCollection,
     ServicesCollection,
     PortfoliosCollection,
     ClientsPartnersCollection,
-    AboutsCollection
+    TeamMembersCollection
   ]
 })
 
