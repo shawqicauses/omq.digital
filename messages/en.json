@@ -1,5 +1,5 @@
 {
-  "reviewed": "true - 06",
+  "reviewed": "true - 07",
   "languages": {
     "en": "English",
     "ar": "Arabic"
@@ -54,6 +54,8 @@
   },
   "about": {
     "title": "About OMQ",
-    "cta": "Explore our innovative services and packages now, and get outstanding digital solutions to help you achieve your goals and succeed in the business world!"
+    "team": "Our Team",
+    "cta": "Explore our innovative services and packages now, and get outstanding digital solutions to help you achieve your goals and succeed in the business world!",
+    "cta-button": "Discover our services"
   }
 }
