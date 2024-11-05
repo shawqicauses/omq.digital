@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 10
+// DONE REVIEWING: GITHUB COMMIT - 11
 
 import trpc from "@/client"
 import {Service} from "@/payload-types"
@@ -12,12 +12,14 @@ import ServicesList from "./services-list"
 const Services = function Services({locale}: {locale: string}) {
   const {data, isLoading} = trpc.getServices.useQuery({locale})
 
-  const services = data?.services.map((service) => ({
-    id: service.id,
-    title: service.title,
-    description: service.description,
-    icon: service.icon
-  }))
+  const services = data
+    ? (data.services.map((doc) => ({
+        id: doc.id,
+        title: doc.title,
+        description: doc.description,
+        icon: doc.icon
+      })) as Service[])
+    : []
 
   const t = useTranslations("home-page.services")
 
@@ -31,12 +33,11 @@ const Services = function Services({locale}: {locale: string}) {
           </p>
           <p className="mt-6 text-lg italic leading-8 text-muted-foreground">{t("quote")}</p>
         </div>
-        {(isLoading && (
+        {((isLoading || !services.length) && (
           <div className="mt-16 flex items-center justify-center text-primary">
             <Loader2Icon className="h-10 w-10 animate-spin stroke-current" />
           </div>
-        )) ||
-          (services && <ServicesList services={services as Service[]} />)}
+        )) || <ServicesList services={services} />}
       </Container>
     </div>
   )
