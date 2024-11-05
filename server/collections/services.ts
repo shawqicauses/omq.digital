@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 04
+// DONE REVIEWING: GITHUB COMMIT - 05
 import {CollectionConfig} from "payload/types"
 
 const ServicesCollection: CollectionConfig = {
@@ -76,6 +76,14 @@ const ServicesCollection: CollectionConfig = {
               ]
             }
           ]
+        },
+        {
+          label: {en: "Price", ar: "السعر"},
+          type: "number",
+          name: "price",
+          min: 1,
+          required: true,
+          localized: false
         }
       ]
     },
