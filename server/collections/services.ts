@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 05
+// DONE REVIEWING: GITHUB COMMIT - 06
 import {CollectionConfig} from "payload/types"
 
 const ServicesCollection: CollectionConfig = {
@@ -74,16 +74,56 @@ const ServicesCollection: CollectionConfig = {
                   localized: true
                 }
               ]
+            },
+            {
+              label: {en: "Pricing", ar: "التسعيرة"},
+              type: "group",
+              name: "pricing",
+              localized: false,
+              fields: [
+                {
+                  label: {en: "From", ar: "من"},
+                  type: "number",
+                  name: "pricing_from",
+                  min: 1,
+                  required: true,
+                  localized: false
+                },
+                {
+                  label: {en: "To", ar: "إلى"},
+                  type: "number",
+                  name: "pricing_to",
+                  min: 1,
+                  required: true,
+                  localized: false
+                }
+              ]
             }
           ]
         },
         {
-          label: {en: "Price", ar: "السعر"},
-          type: "number",
-          name: "price",
-          min: 1,
-          required: true,
-          localized: false
+          label: {en: "Pricing", ar: "التسعيرة"},
+          type: "group",
+          name: "pricing",
+          localized: false,
+          fields: [
+            {
+              label: {en: "From", ar: "من"},
+              type: "number",
+              name: "pricing_from",
+              min: 1,
+              required: true,
+              localized: false
+            },
+            {
+              label: {en: "To", ar: "إلى"},
+              type: "number",
+              name: "pricing_to",
+              min: 1,
+              required: true,
+              localized: false
+            }
+          ]
         }
       ]
     },
