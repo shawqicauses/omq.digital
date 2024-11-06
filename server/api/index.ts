@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 03
+// DONE REVIEWING: GITHUB COMMIT - 04
 import {TRPCError} from "@trpc/server"
 import {z} from "zod"
 import initPayload from "../payload"
@@ -50,6 +50,23 @@ export const appRouter = router({
         })
 
         return {success: true, services}
+      } catch (error) {
+        throw new TRPCError({code: "INTERNAL_SERVER_ERROR"})
+      }
+    }),
+  getService: procedure
+    .input(z.object({id: z.string().min(1), locale: z.string().min(1).max(64)}))
+    .query(async ({input: {id, locale}}) => {
+      const payload = await initPayload()
+
+      try {
+        const {docs: service} = await payload.find({
+          collection: "services",
+          where: {id: {equals: id}},
+          locale
+        })
+
+        return {success: true, service}
       } catch (error) {
         throw new TRPCError({code: "INTERNAL_SERVER_ERROR"})
       }
