@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 04
+// DONE REVIEWING: GITHUB COMMIT - 05
 import trpc from "@/client"
 import {Logo} from "@/components/navigation"
 import {Button} from "@/components/ui"
@@ -44,7 +44,7 @@ const Page = function Page({params: {locale}}: {params: {locale: string}}) {
   })) as TeamMember[]
 
   return (
-    <main className="relative isolate mx-auto mb-24 w-full max-w-xl-6 space-y-24 px-6 lg:px-8">
+    <main className="relative isolate mx-auto mt-48 w-full max-w-xl-6 px-6 lg:px-8">
       {/* Background */}
       <div
         aria-hidden="true"
@@ -56,7 +56,7 @@ const Page = function Page({params: {locale}}: {params: {locale: string}}) {
       </div>
 
       {/* Header */}
-      <header>
+      <header className="mb-24">
         <Logo className="mx-auto !h-52" />
         <h1 className="-mt-5 text-center text-xl-3 font-bold leading-none tracking-tight text-foreground sm:text-xl-4">
           {t("title")}.
@@ -67,8 +67,8 @@ const Page = function Page({params: {locale}}: {params: {locale: string}}) {
       </header>
 
       {abouts.slice(1).map((about) => (
-        <div key={about.id} className="flex flex-col gap-5">
-          <h2 className="text-center text-xl-2 font-bold !leading-normal tracking-tight text-foreground sm:text-xl-3">
+        <div key={about.id} className="mb-24 flex flex-col gap-5">
+          <h2 className="mx-auto max-w-xl-4 text-center text-xl-2 font-bold !leading-normal tracking-tight text-foreground sm:text-xl-3">
             {about.title}
           </h2>
           {about.description.split(". ").map((element) => (
@@ -80,7 +80,7 @@ const Page = function Page({params: {locale}}: {params: {locale: string}}) {
       ))}
 
       {/* Team */}
-      <div className="flex flex-col gap-5">
+      <div className="mb-24 flex flex-col gap-5">
         <h2 className="text-center text-xl-2 font-bold !leading-normal tracking-tight text-foreground sm:text-xl-3">
           {t("team")}
         </h2>
@@ -103,7 +103,7 @@ const Page = function Page({params: {locale}}: {params: {locale: string}}) {
       </div>
 
       {/* CTA */}
-      <div className="flex w-full flex-col items-center justify-between gap-5 rounded-lg border border-primary bg-muted/25 p-10 shadow-xl shadow-primary/20 backdrop-blur-sm sm:flex-row">
+      <div className="mb-24 flex w-full flex-col items-center justify-between gap-5 rounded-lg border border-primary bg-muted/25 p-10 shadow-xl shadow-primary/20 backdrop-blur-sm sm:flex-row">
         <p className="max-w-xl-3 text-lg leading-relaxed text-foreground">{t("cta")}</p>
         <Button asChild>
           <Link href="/services">{t("cta-button")}</Link>
