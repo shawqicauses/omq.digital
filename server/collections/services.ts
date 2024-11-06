@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 06
+// DONE REVIEWING: GITHUB COMMIT - 07
 import {CollectionConfig} from "payload/types"
 
 const ServicesCollection: CollectionConfig = {
@@ -33,6 +33,7 @@ const ServicesCollection: CollectionConfig = {
     },
     {
       label: {en: "Packages", ar: "الباقات"},
+      labels: {singular: {en: "Package", ar: "باقة"}, plural: {en: "Packages", ar: "باقات"}},
       type: "array",
       name: "packages",
       required: false,
@@ -47,6 +48,10 @@ const ServicesCollection: CollectionConfig = {
         },
         {
           label: {en: "Offerings", ar: "العروض"},
+          labels: {
+            singular: {en: "Offering", ar: "العرض"},
+            plural: {en: "Offerings", ar: "العروض"}
+          },
           type: "array",
           name: "offerings",
           required: true,
@@ -61,6 +66,10 @@ const ServicesCollection: CollectionConfig = {
             },
             {
               label: {en: "Features", ar: "المميزات"},
+              labels: {
+                singular: {en: "Feature", ar: "مميزة"},
+                plural: {en: "Features", ar: "مميزات"}
+              },
               type: "array",
               name: "features",
               required: true,
@@ -129,6 +138,7 @@ const ServicesCollection: CollectionConfig = {
     },
     {
       label: {en: "Notes", ar: "الملاحظات"},
+      labels: {singular: {en: "Note", ar: "ملاحظة"}, plural: {en: "Notes", ar: "ملاحظات"}},
       type: "array",
       name: "notes",
       required: false,
