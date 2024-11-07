@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 07
+// DONE REVIEWING: GITHUB COMMIT - 08
 
 import {cn} from "@/lib/utils"
 import {useTranslations} from "next-intl"
@@ -37,8 +37,8 @@ const Hero = function Hero({locale}: {locale: string}) {
       </div>
       <div
         className={cn(
-          "relative z-40 mx-auto py-32 sm:py-48 lg:py-56",
-          locale === "ar" ? "max-w-xl" : "max-w-xl-3"
+          "relative z-40 mx-auto px-6 py-32 sm:py-48 lg:px-8 lg:py-56",
+          locale === "ar" ? "max-w-xl-2" : "max-w-xl-4"
         )}>
         <div className="text-center">
           <h1
