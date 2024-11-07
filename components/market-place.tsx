@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 7
+// DONE REVIEWING: GITHUB COMMIT - 08
 import {
   BuildingStorefrontIcon,
   CreditCardIcon,
@@ -45,7 +45,7 @@ const MarketPlace = function MarketPlace() {
               alt="Market-Place Screen Shot"
               width={2432}
               height={1442}
-              className="relative min-w-full rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem]"
+              className="relative min-w-full rounded-lg shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem]"
             />
             <div className="max-w-xl lg:row-start-3 lg:mt-10 lg:max-w-md lg:border-t lg:border-white/10 lg:pt-10">
               <dl className="max-w-xl space-y-8 text-base leading-7 text-slate-300 lg:max-w-none">
