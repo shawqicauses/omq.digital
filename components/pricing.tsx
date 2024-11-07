@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 7
+// DONE REVIEWING: GITHUB COMMIT - 08
 
 import {CheckIcon} from "@heroicons/react/20/solid"
 import Link from "next/link"
@@ -73,9 +73,9 @@ const Pricing = function Pricing() {
               element.featured
                 ? ""
                 : index === 0
-                  ? "rounded-t-xl-3 sm:rounded-b-none lg:rounded-bl-xl-3 lg:rounded-tr-none"
-                  : "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-xl-3",
-              "rounded-xl-3 p-8 ring-1 ring-border sm:p-10"
+                  ? "rounded-t-lg sm:rounded-b-none lg:rounded-bl-lg lg:rounded-tr-none"
+                  : "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-lg",
+              "rounded-lg p-8 ring-1 ring-border sm:p-10"
             )}>
             <h3 id={element.id} className="text-base font-medium leading-7 text-primary">
               {element.name}
