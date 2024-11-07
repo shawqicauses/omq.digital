@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 05
+// DONE REVIEWING: GITHUB COMMIT - 06
 import trpc from "@/client"
 import {Logo} from "@/components/navigation"
 import {Button} from "@/components/ui"
@@ -91,7 +91,7 @@ const Page = function Page({params: {locale}}: {params: {locale: string}}) {
                 src={(member.image as Media).sizes.thumbnail.url}
                 alt={member.name}
                 fill
-                className="!static aspect-[14/13] !h-auto w-full rounded-xl-2 object-cover"
+                className="!static aspect-[14/13] !h-auto w-full rounded-lg object-cover"
               />
               <h3 className="mt-6 text-lg font-semi-bold leading-8 tracking-tight text-foreground">
                 {member.name}
@@ -103,7 +103,7 @@ const Page = function Page({params: {locale}}: {params: {locale: string}}) {
       </div>
 
       {/* CTA */}
-      <div className="mb-24 flex w-full flex-col items-center justify-between gap-5 rounded-lg border border-primary bg-muted/25 p-10 shadow-xl shadow-primary/20 backdrop-blur-sm sm:flex-row">
+      <div className="mb-24 flex w-full flex-col items-center justify-between gap-5 rounded-lg border border-primary bg-muted/25 p-10 shadow-xl shadow-primary/20 backdrop-blur-md sm:flex-row">
         <p className="max-w-xl-3 text-lg leading-relaxed text-foreground">{t("cta")}</p>
         <Button asChild>
           <Link href="/services">{t("cta-button")}</Link>
