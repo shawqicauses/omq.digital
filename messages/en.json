@@ -1,5 +1,5 @@
 {
-  "reviewed": "true - 07",
+  "reviewed": "true - 08",
   "languages": {
     "en": "English",
     "ar": "Arabic"
@@ -10,7 +10,8 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "request-service": "Request Service"
+    "request-service": "Request Service",
+    "request-package": "Request Package"
   },
   "home-page": {
     "header": {
@@ -49,6 +50,7 @@
       }
     },
     "footer": {
+      "copyright": "© 2024 OMQ Solutions, All Rights Reserved.",
       "paragraph": "OMQ is a digital marketing company and provider of IT and internet services, created to be a creative addition to the digital world, successfully growing its clients and ensuring their satisfaction."
     }
   },
