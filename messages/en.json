@@ -1,5 +1,5 @@
 {
-  "reviewed": "true - 08",
+  "reviewed": "true - 09",
   "languages": {
     "en": "English",
     "ar": "Arabic"
@@ -26,6 +26,7 @@
       "headline": "Discover OMQ Services",
       "title": "What will we offer you at OMQ?",
       "quote": "If your business doesn't have an online presence, it will disappear from the business list - Bill Gates",
+      "description": "We offer digital marketing solutions, social media management, and analytics. Our services stand out for their high quality and competitive pricing.",
       "buttons": {
         "all-services": "All Services",
         "service-button": "Read more"
@@ -50,7 +51,7 @@
       }
     },
     "footer": {
-      "copyright": "© 2024 OMQ Solutions, All Rights Reserved.",
+      "copyright": "© 2024 All Rights Reserved By OMQ.",
       "paragraph": "OMQ is a digital marketing company and provider of IT and internet services, created to be a creative addition to the digital world, successfully growing its clients and ensuring their satisfaction."
     }
   },
