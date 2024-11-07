@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 09
+// DONE REVIEWING: GITHUB COMMIT - 10
 import trpc from "@/client"
 import {Service} from "@/payload-types"
 import {Loader2Icon} from "lucide-react"
@@ -22,7 +22,7 @@ const ServicesPage = function ServicesPage({params: {locale}}: {params: {locale:
 
   return (
     <Fragment>
-      <SectionHeader title={t("title")} description={t("quote")} />
+      <SectionHeader title={t("title")} description={t("description")} />
       <Container>
         {(isLoading && (
           <div className="mt-16 flex h-full min-h-screen items-center justify-center text-primary">

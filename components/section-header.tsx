@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 05
+// DONE REVIEWING: GITHUB COMMIT - 06
 import Image from "next/image"
 
 type SectionHeaderProps = {
@@ -35,9 +35,13 @@ const SectionHeader = function SectionHeader({
           style={{clipPath}}
         />
       </div>
-      <div className="mx-auto max-w-xl-2 text-center">
-        <h2 className="text-xl-4 font-bold tracking-tight text-foreground sm:text-xl-6">{title}</h2>
-        <p className="mt-6 text-lg leading-8 text-muted-foreground">{description}</p>
+      <div className="mx-auto text-center">
+        <h2 className="mx-auto max-w-xl-2 text-xl-4 font-bold tracking-tight text-foreground sm:text-xl-6">
+          {title}
+        </h2>
+        <p className="mx-auto mt-6 max-w-xl-3 text-lg leading-8 text-muted-foreground">
+          {description}
+        </p>
       </div>
     </div>
   )
