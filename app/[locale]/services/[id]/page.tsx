@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 04
+// DONE REVIEWING: GITHUB COMMIT - 05
 
 import trpc from "@/client"
 import {Button} from "@/components/ui"
@@ -65,6 +65,14 @@ const Page = function Page({params: {id, locale}}: {params: {id: string; locale:
           {service.description}
         </p>
       </header>
+
+      <p className="mb-6 text-center text-lg font-medium italic text-foreground">
+        {locale === "ar" ? (
+          <Fragment>ماذا ستقدم لك عُمق من خلال باقة {service.title}؟</Fragment>
+        ) : locale === "en" ? (
+          <Fragment>What will OMQ offer you through its {service.title} packages.</Fragment>
+        ) : null}
+      </p>
 
       <p className="mb-24 text-center text-lg font-medium italic text-foreground">
         {locale === "ar" ? (
