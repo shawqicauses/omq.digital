@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 07
+// DONE REVIEWING: GITHUB COMMIT - 08
 
 import {Link} from "@/i18n/routing"
 import {cn} from "@/lib/utils"
@@ -39,7 +39,7 @@ const Navigation = function Navigation({locale}: {locale: string}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-24 border-b border-border bg-background/20 backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 h-24 border-b border-border bg-background/20 backdrop-blur-md">
       <nav aria-label="Global" className="flex items-center justify-between px-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Logo />
@@ -47,7 +47,7 @@ const Navigation = function Navigation({locale}: {locale: string}) {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-400"
+            className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-slate-400"
             onClick={() => setMobileMenuOpen(true)}>
             <span className="sr-only">Open Main Menu</span>
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
@@ -87,7 +87,7 @@ const Navigation = function Navigation({locale}: {locale: string}) {
             <Logo />
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-slate-400"
+              className="-m-2.5 rounded-lg p-2.5 text-slate-400"
               onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">Close Main Menu</span>
               <XMarkIcon aria-hidden="true" className="h-6 w-6" />
