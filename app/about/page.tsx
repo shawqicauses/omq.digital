@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 15
+// DONE REVIEWING: GITHUB COMMIT - 16
 
 import {
   AcademicCapIcon,
@@ -162,7 +162,7 @@ const AboutPage = function AboutPage() {
           src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5"
           alt="About OMQ"
           fill
-          className="!static aspect-[9/4] w-full object-cover xl:rounded-xl"
+          className="!static aspect-[9/4] w-full object-cover xl:rounded-lg"
         />
       </div>
 
@@ -211,7 +211,7 @@ const AboutPage = function AboutPage() {
                 src={element.image}
                 alt={element.name}
                 fill
-                className="!static aspect-[14/13] !h-auto w-full rounded-xl-2 object-cover"
+                className="!static aspect-[14/13] !h-auto w-full rounded-lg object-cover"
               />
               <h3 className="mt-6 text-lg font-semi-bold leading-8 tracking-tight text-foreground">
                 {element.name}
