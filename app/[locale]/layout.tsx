@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 10
+// DONE REVIEWING: GITHUB COMMIT - 11
 import {NextIntlClientProvider} from "next-intl"
 import {getMessages} from "next-intl/server"
 import {Montserrat, Tajawal} from "next/font/google"
@@ -42,7 +42,7 @@ const Layout = async function Layout({
             alt="OMQ Logo"
             fill
             sizes="(max-width: 768px) 100vw, 125vw"
-            className="!fixed !inset-[initial] !top-1/2 hidden !h-auto -translate-y-1/2 blur-lg lg:!-right-[62.5vw] lg:block lg:!w-[125vw] lg:max-w-[125vw] xl:!-right-[50vw] xl:w-[100vw] xl:max-w-[100vw]"
+            className="!fixed !inset-[initial] !top-1/2 hidden !h-auto -translate-y-1/2 blur-md lg:!-right-[62.5vw] lg:block lg:!w-[125vw] lg:max-w-[125vw] xl:!-right-[50vw] xl:w-[100vw] xl:max-w-[100vw]"
           />
           <Image
             src="/assets/logo-outline.png"
