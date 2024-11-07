@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT - 01
 
 import {CheckCircle2Icon} from "lucide-react"
 import {useTranslations} from "next-intl"
@@ -20,7 +20,7 @@ const Whys = function Whys() {
               {[1, 2, 3, 4, 5, 6, 7].map((element) => (
                 <div
                   key={element}
-                  className="relative rounded-md bg-background/10 p-2 px-3 backdrop-blur">
+                  className="relative rounded-lg bg-background/10 p-2 px-3 backdrop-blur-md">
                   <dt className="flex items-center gap-3 text-lg">
                     <CheckCircle2Icon
                       aria-hidden="true"
