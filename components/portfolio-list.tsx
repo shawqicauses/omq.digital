@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 5
+// DONE REVIEWING: GITHUB COMMIT - 06
 
 import Image from "next/image"
 
@@ -27,7 +27,7 @@ const PortfolioList = function PortfolioList({portfolios}: PortfolioListProps) {
       {portfolios.map((portfolio) => (
         <div
           key={portfolio.id}
-          className="group relative z-40 bg-slate-900 pb-20 sm:pb-24 xl:rounded-xl xl:pb-0">
+          className="group relative z-40 bg-slate-900 pb-20 sm:pb-24 xl:rounded-lg xl:pb-0">
           <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
             <div
               className={`absolute left-[calc(${classes.calc})] top-[calc(${classes.calc})] transform-gpu blur-xl-3`}>
@@ -44,7 +44,7 @@ const PortfolioList = function PortfolioList({portfolios}: PortfolioListProps) {
                   src={portfolio.image}
                   alt={portfolio.title}
                   fill
-                  className="!absolute !inset-0 !h-full !w-full rounded-xl bg-border object-cover shadow-xl-2"
+                  className="!absolute !inset-0 !h-full !w-full rounded-lg bg-border object-cover shadow-xl-2"
                 />
               </div>
             </div>
