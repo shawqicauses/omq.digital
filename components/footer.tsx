@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 04
+// DONE REVIEWING: GITHUB COMMIT - 05
 import {useTranslations} from "next-intl"
 import {Fragment} from "react"
 import {BsFacebook, BsInstagram, BsTwitter} from "react-icons/bs"
@@ -46,9 +46,7 @@ const Footer = function Footer() {
             ))}
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center text-xs leading-5 text-muted-foreground">
-              &copy; 2024 OMQ Solutions, Inc. Rights Reserved.
-            </p>
+            <p className="text-center text-xs leading-5 text-muted-foreground">{t("copyright")}</p>
           </div>
         </div>
       </footer>
