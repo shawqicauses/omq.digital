@@ -1,5 +1,5 @@
 {
-  "reviewed": "true - 09",
+  "reviewed": "true - 10",
   "languages": {
     "en": "English",
     "ar": "Arabic"
@@ -49,6 +49,11 @@
         "title": "Why we are at OMQ distinguished?",
         "data": "Our commitment to technical development, digital marketing, and communication with numerous clients makes our company your top choice for achieving your goals."
       }
+    },
+    "portfolios": {
+      "headline": "Our Work",
+      "title": "A Successful Journey",
+      "description": "Our journey has been marked by success in the Bahraini market, where we have helped expand our clients' reach and enhance the value of their brands. Those who chose our services made the right decision, and we are dedicated to thinking about your success."
     },
     "footer": {
       "copyright": "© 2024 All Rights Reserved By OMQ.",
