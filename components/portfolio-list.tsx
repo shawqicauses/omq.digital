@@ -1,29 +1,46 @@
-// DONE REVIEWING: GITHUB COMMIT - 06
+// DONE REVIEWING: GITHUB COMMIT - 07
 
+import trpc from "@/client"
+import {Media, Portfolio} from "@/payload-types"
 import Image from "next/image"
+import Loading from "./loading"
 
-type PortfolioListProps = {
-  portfolios: {
-    id: string | number
-    image: string
-    title: string
-    testimonial: string
-    client: {
-      name: string
-      title: string
-    }
-  }[]
-}
-
-const PortfolioList = function PortfolioList({portfolios}: PortfolioListProps) {
+const PortfolioList = function PortfolioList({
+  locale,
+  asSection = false
+}: {
+  locale: string
+  asSection?: boolean
+}) {
   const classes = {
     calc: ["50%", "36rem"].join("-"),
     clipPath:
       "polygon(74% 44%, 100% 61%, 97% 26%, 85% 0%, 80% 2%, 72% 32%, 60% 62%, 52% 68%, 47% 58%, 45% 34%, 27% 76%, 0% 64%, 17% 100%, 27% 76%, 76% 97%, 74% 44%)"
   }
 
+  const {data, isLoading} = trpc.getPortfolios.useQuery({locale})
+
+  if (isLoading || !data) return <Loading screen={!asSection} />
+
+  if (!data.portfolios.length)
+    return (
+      <p className="my-16 text-center text-lg font-medium italic text-foreground">
+        {locale === "ar" ? "لا توجد أعمال" : locale === "en" ? "No portfolios" : null}
+      </p>
+    )
+
+  const portfolios = data.portfolios.map((portfolio) => ({
+    id: portfolio.id,
+    title: portfolio.title,
+    client_name: portfolio.client_name,
+    client_title: portfolio.client_title,
+    client_testimonial: portfolio.client_testimonial,
+    website: portfolio.website,
+    image: portfolio.image
+  })) as Portfolio[]
+
   return (
-    <div className="my-32 mb-0 flex w-full flex-col gap-20 xl:mb-32 xl:gap-24">
+    <div className="my-12 flex w-full flex-col gap-12 md:my-24 xl:gap-24">
       {portfolios.map((portfolio) => (
         <div
           key={portfolio.id}
@@ -41,7 +58,7 @@ const PortfolioList = function PortfolioList({portfolios}: PortfolioListProps) {
             <div className="-mt-8 w-full max-w-xl-2 group-even:order-none xl:-mb-8 xl:w-96 xl:flex-none group-even:xl:order-1">
               <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                 <Image
-                  src={portfolio.image}
+                  src={`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${(portfolio.image as Media).sizes.thumbnail_tablet.filename}`}
                   alt={portfolio.title}
                   fill
                   className="!absolute !inset-0 !h-full !w-full rounded-lg bg-border object-cover shadow-xl-2"
@@ -61,14 +78,14 @@ const PortfolioList = function PortfolioList({portfolios}: PortfolioListProps) {
                   {portfolio.title}
                 </h3>
                 <blockquote className="mt-4 text-xl font-medium leading-8 text-muted-foreground sm:text-xl-2 sm:leading-9">
-                  <p>{portfolio.testimonial}</p>
+                  <p>{portfolio.client_testimonial}</p>
                 </blockquote>
                 <figcaption className="mt-8 text-base">
                   <div className="text-base font-medium text-foreground sm:text-lg">
-                    {portfolio.client.name}
+                    {portfolio.client_name}
                   </div>
                   <div className="mt-1 text-sm text-muted-foreground sm:text-base">
-                    {portfolio.client.title}
+                    {portfolio.client_title}
                   </div>
                 </figcaption>
               </figure>

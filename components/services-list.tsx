@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 08
+// DONE REVIEWING: GITHUB COMMIT - 09
 
 import trpc from "@/client"
 import {Link} from "@/i18n/routing"
@@ -35,7 +35,7 @@ const ServicesList = function ServicesList({locale, asSection = false}: Services
   })) as Service[]
 
   return (
-    <div className="mx-auto my-12 md:my-24">
+    <div className="my-12 md:my-24">
       <dl className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {services.map((service) => (
           <Link
