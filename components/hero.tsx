@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 08
+// DONE REVIEWING: GITHUB COMMIT - 09
 
 import {cn} from "@/lib/utils"
 import {useTranslations} from "next-intl"
@@ -19,7 +19,7 @@ const Hero = function Hero({locale}: {locale: string}) {
   }
 
   return (
-    <div className="relative isolate mt-24 overflow-hidden pt-14">
+    <div className="relative isolate mt-24 overflow-hidden">
       <Image
         src="/assets/hero-image.webp"
         alt="Company Stuff"
