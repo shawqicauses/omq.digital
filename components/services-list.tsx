@@ -1,20 +1,42 @@
-// DONE REVIEWING: GITHUB COMMIT - 07
+// DONE REVIEWING: GITHUB COMMIT - 08
 
+import trpc from "@/client"
 import {Link} from "@/i18n/routing"
 import {Media, Service} from "@/payload-types"
 import {useTranslations} from "next-intl"
 import Image from "next/image"
+import Loading from "./loading"
 import {Button} from "./ui"
 
 type ServicesListProps = {
-  services: Service[]
+  locale: string
+  asSection?: boolean
 }
 
-const ServicesList = function ServicesList({services}: ServicesListProps) {
+const ServicesList = function ServicesList({locale, asSection = false}: ServicesListProps) {
   const t = useTranslations("home-page.services")
+
+  const {data, isLoading} = trpc.getServices.useQuery({locale})
+
+  if (isLoading || !data) return <Loading screen={!asSection} />
+
+  if (!data.services.length)
+    return (
+      <p className="my-16 text-center text-lg font-medium italic text-foreground">
+        {locale === "ar" ? "لا توجد خدمات" : locale === "en" ? "No services" : null}
+      </p>
+    )
+
+  const services = data.services.map((doc) => ({
+    id: doc.id,
+    title: doc.title,
+    description: doc.description,
+    icon: doc.icon
+  })) as Service[]
+
   return (
-    <div className="mx-auto my-16 sm:my-20 lg:my-24">
-      <dl className="mx-auto grid max-w-xl grid-cols-1 gap-8 md:max-w-none md:grid-cols-2 xl:grid-cols-3">
+    <div className="mx-auto my-12 md:my-24">
+      <dl className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {services.map((service) => (
           <Link
             key={service.id}
@@ -22,7 +44,7 @@ const ServicesList = function ServicesList({services}: ServicesListProps) {
             className="shc-transition relative flex flex-col rounded-lg bg-background/10 p-6 ring-2 ring-inset ring-muted backdrop-blur-md hover:bg-muted">
             <div className="relative mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-primary shadow-xl shadow-primary/20">
               <Image
-                src={(service.icon as Media).sizes.icon.url}
+                src={`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${(service.icon as Media).sizes.icon.filename}`}
                 alt={service.title}
                 fill
                 sizes="1.5rem"
