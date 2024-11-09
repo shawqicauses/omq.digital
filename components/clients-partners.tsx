@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT - 01
 
 import trpc from "@/client"
 import {ClientsPartner, Media} from "@/payload-types"
@@ -43,7 +43,7 @@ const ClientsPartners = function ClientsPartners({
           <Container>
             <div className="mx-0 max-w-none lg:mx-auto lg:max-w-xl-2 lg:text-center">
               <h2 className="text-xl-3 font-bold tracking-tight text-foreground sm:text-xl-4">
-                {locale === "ar" ? "من عملاء عمق" : locale === "en" ? "Clients of OMQ" : null}
+                {locale === "ar" ? "من عملاء عُمق" : locale === "en" ? "Clients of OMQ" : null}
               </h2>
             </div>
             <Swiper slidesPerView={4} spaceBetween={50} className="my-12 md:my-24">
@@ -70,7 +70,7 @@ const ClientsPartners = function ClientsPartners({
             <div className="mx-0 max-w-none lg:mx-auto lg:max-w-xl-2 lg:text-center">
               <h2 className="text-xl-3 font-bold tracking-tight text-foreground sm:text-xl-4">
                 {locale === "ar"
-                  ? "شركاء نجاح عمق"
+                  ? "شركاء نجاح عُمق"
                   : locale === "en"
                     ? "OMQ Success Partners"
                     : null}
