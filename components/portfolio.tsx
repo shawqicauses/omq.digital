@@ -1,4 +1,6 @@
-// DONE REVIEWING: GITHUB COMMIT - 14
+"use client"
+
+// DONE REVIEWING: GITHUB COMMIT - 15
 
 import {useTranslations} from "next-intl"
 import Container from "./container"

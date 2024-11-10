@@ -1,17 +1,14 @@
-// DONE REVIEWING: GITHUB COMMIT - 07
+"use client"
+
+// DONE REVIEWING: GITHUB COMMIT - 08
 
 import trpc from "@/client"
 import {Media, Portfolio} from "@/payload-types"
 import Image from "next/image"
+import Link from "next/link"
 import Loading from "./loading"
 
-const PortfolioList = function PortfolioList({
-  locale,
-  asSection = false
-}: {
-  locale: string
-  asSection?: boolean
-}) {
+const PortfolioList = function PortfolioList({locale}: {locale: string}) {
   const classes = {
     calc: ["50%", "36rem"].join("-"),
     clipPath:
@@ -20,7 +17,7 @@ const PortfolioList = function PortfolioList({
 
   const {data, isLoading} = trpc.getPortfolios.useQuery({locale})
 
-  if (isLoading || !data) return <Loading screen={!asSection} />
+  if (isLoading || !data) return <Loading screen={false} />
 
   if (!data.portfolios.length)
     return (
@@ -42,7 +39,9 @@ const PortfolioList = function PortfolioList({
   return (
     <div className="my-12 flex w-full flex-col gap-12 md:my-24 xl:gap-24">
       {portfolios.map((portfolio) => (
-        <div
+        <Link
+          href={portfolio.website}
+          target="_blank"
           key={portfolio.id}
           className="group relative z-40 bg-slate-900 pb-20 sm:pb-24 xl:rounded-lg xl:pb-0">
           <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
@@ -91,7 +90,7 @@ const PortfolioList = function PortfolioList({
               </figure>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   )

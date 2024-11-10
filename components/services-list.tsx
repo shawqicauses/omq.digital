@@ -1,4 +1,6 @@
-// DONE REVIEWING: GITHUB COMMIT - 10
+"use client"
+
+// DONE REVIEWING: GITHUB COMMIT - 11
 
 import trpc from "@/client"
 import {Link} from "@/i18n/routing"
