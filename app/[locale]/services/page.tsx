@@ -1,18 +1,18 @@
-"use client"
-
-// DONE REVIEWING: GITHUB COMMIT - 11
-import {useTranslations} from "next-intl"
+// DONE REVIEWING: GITHUB COMMIT - 12
+import {getTranslations} from "next-intl/server"
 import {Fragment} from "react"
 import {Container, SectionHeader, ServicesList} from "../../../components/index"
 
-const ServicesPage = function ServicesPage({params: {locale}}: {params: {locale: string}}) {
-  const t = useTranslations("home-page.services")
+const ServicesPage = async function ServicesPage({params: {locale}}: {params: {locale: string}}) {
+  const t = await getTranslations("home-page.services")
 
   return (
     <Fragment>
+      <title>{t("title")}</title>
+      <meta name="description" content={t("description")} />
       <SectionHeader title={t("title")} description={t("description")} />
       <Container>
-        <ServicesList locale={locale} asSection={false} />
+        <ServicesList locale={locale} />
       </Container>
     </Fragment>
   )
