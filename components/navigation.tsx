@@ -1,8 +1,8 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 08
+// DONE REVIEWING: GITHUB COMMIT - 09
 
-import {Link} from "@/i18n/routing"
+import {Link, usePathname} from "@/i18n/routing"
 import {cn} from "@/lib/utils"
 import {Dialog, DialogPanel} from "@headlessui/react"
 import {Bars3Icon, ChevronRightIcon, XMarkIcon} from "@heroicons/react/24/outline"
@@ -16,7 +16,7 @@ const navigation = [
   {name: "about", href: "/about"},
   {name: "services", href: "/services"},
   {name: "portfolio", href: "/portfolio"},
-  {name: "contact", href: "/contact"}
+  {name: "contact", href: "mailto:contact@omq.com"}
 ]
 
 export const Logo = function Logo({className}: HTMLAttributes<HTMLAnchorElement>) {
@@ -35,6 +35,7 @@ export const Logo = function Logo({className}: HTMLAttributes<HTMLAnchorElement>
 }
 
 const Navigation = function Navigation({locale}: {locale: string}) {
+  const pathname = usePathname()
   const t = useTranslations()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -65,7 +66,7 @@ const Navigation = function Navigation({locale}: {locale: string}) {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-5">
           <Button variant="outline" size="sm" asChild>
-            <Link href="/" locale={locale === "en" ? "ar" : "en"}>
+            <Link href={pathname} locale={locale === "en" ? "ar" : "en"}>
               {t(locale === "en" ? "languages.ar" : "languages.en")}
             </Link>
           </Button>
