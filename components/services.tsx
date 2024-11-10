@@ -1,18 +1,12 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 12
+// DONE REVIEWING: GITHUB COMMIT - 13
 
 import {useTranslations} from "next-intl"
 import Container from "./container"
 import ServicesList from "./services-list"
 
-const Services = function Services({
-  locale,
-  asSection = false
-}: {
-  locale: string
-  asSection?: boolean
-}) {
+const Services = function Services({locale}: {locale: string}) {
   const t = useTranslations("home-page.services")
   return (
     <div className="my-16 md:my-32">
@@ -24,7 +18,7 @@ const Services = function Services({
           </p>
           <p className="text-lg italic leading-8 text-muted-foreground">{t("quote")}</p>
         </div>
-        <ServicesList locale={locale} asSection={asSection} />
+        <ServicesList locale={locale} />
       </Container>
     </div>
   )
