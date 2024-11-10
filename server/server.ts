@@ -1,15 +1,15 @@
-// DONE REVIEWING: GITHUB COMMIT - 03
+// DONE REVIEWING: GITHUB COMMIT - 04
 import {inferAsyncReturnType} from "@trpc/server"
 import * as trpcExpress from "@trpc/server/adapters/express"
 import dotenv from "dotenv"
 import express from "express"
 import nextBuild from "next/dist/build"
 import path from "path"
-import {appRouter} from "./server/api"
-import {nextApplication, nextRequestHandler, port} from "./server/next"
-import initPayload from "./server/payload"
+import {appRouter} from "./api"
+import {nextApplication, nextRequestHandler, port} from "./next"
+import initPayload from "./payload"
 
-dotenv.config({path: path.resolve(__dirname, ".env")})
+dotenv.config({path: path.resolve(__dirname, "../.env")})
 
 const app = express()
 
