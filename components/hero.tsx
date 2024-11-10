@@ -1,13 +1,13 @@
-// DONE REVIEWING: GITHUB COMMIT - 09
+// DONE REVIEWING: GITHUB COMMIT - 10
 
 import {cn} from "@/lib/utils"
-import {useTranslations} from "next-intl"
+import {getTranslations} from "next-intl/server"
 import Image from "next/image"
 import Link from "next/link"
 import {Button} from "./ui"
 
-const Hero = function Hero({locale}: {locale: string}) {
-  const t = useTranslations("home-page")
+const Hero = async function Hero({locale}: {locale: string}) {
+  const t = await getTranslations("home-page")
   const classes = {
     calc: {
       1: {base: ["50%", "11rem"].join("-"), sm: ["50%", "30rem"].join("-")},
