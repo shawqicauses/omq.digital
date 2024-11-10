@@ -1,5 +1,5 @@
 {
-  "reviewed": "true - 14",
+  "reviewed": "true - 15",
   "version": "1.0.0",
   "name": "omq.digital",
   "description": "A website for OMQ Solutions Agency (omq.digital) built using Next.JS, TypeScript and Tailwind CSS. Developed by @shawqicauses.",
@@ -8,14 +8,14 @@
   "private": true,
   "main": "dist/server.js",
   "scripts": {
-    "dev:server": "cross-env PAYLOAD_CONFIG_PATH=payload.config.ts nodemon",
-    "build:payload": "cross-env PAYLOAD_CONFIG_PATH=payload.config.ts payload build",
+    "dev:server": "cross-env PAYLOAD_CONFIG_PATH=server/payload.config.ts nodemon",
+    "build:payload": "cross-env PAYLOAD_CONFIG_PATH=server/payload.config.ts payload build",
     "build:server": "tsc --project tsconfig.server.json",
     "build:next": "cross-env PAYLOAD_CONFIG_PATH=dist/payload.config.js NEXT_BUILD=true node dist/server.js",
     "build:application": "cross-env NODE_ENV=production yarn generate:types && yarn build:payload && yarn build:server && yarn copyfiles && yarn build:next",
     "serve:application": "cross-env NODE_ENV=production PAYLOAD_CONFIG_PATH=dist/payload.config.js node dist/server.js",
-    "generate:types": "cross-env PAYLOAD_CONFIG_PATH=./payload.config.ts payload generate:types",
-    "copyfiles": "copyfiles -u 1 \"./media/**/*.{jpeg,jpg,png,svg}\" dist/media"
+    "generate:types": "cross-env PAYLOAD_CONFIG_PATH=server/payload.config.ts payload generate:types",
+    "copyfiles": "copyfiles -u 1 \"media/**/*.{jpeg,jpg,png,svg}\" dist/media"
   },
   "dependencies": {
     "@headlessui/react": "2.0.3",
