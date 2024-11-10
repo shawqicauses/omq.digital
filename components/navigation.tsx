@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 09
+// DONE REVIEWING: GITHUB COMMIT - 10
 
 import {Link, usePathname} from "@/i18n/routing"
 import {cn} from "@/lib/utils"
@@ -71,7 +71,7 @@ const Navigation = function Navigation({locale}: {locale: string}) {
             </Link>
           </Button>
           <Link
-            href="/contact"
+            href="/services"
             className="shc-flex-center shc-label-base shc-transition gap-2 text-white hover:text-violet-400">
             {t("navigation.request-service")}{" "}
             <ChevronRightIcon

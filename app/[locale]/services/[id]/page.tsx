@@ -1,12 +1,12 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 07
+// DONE REVIEWING: GITHUB COMMIT - 08
 
 import trpc from "@/client"
 import Container from "@/components/container"
 import Loading from "@/components/loading"
 import {Button} from "@/components/ui"
-import {Media, Service} from "@/payload-types"
+import {Media, Service} from "@/server/payload-types"
 import {CheckCircle2Icon, CheckIcon, CopyXIcon} from "lucide-react"
 import {useTranslations} from "next-intl"
 import Image from "next/image"

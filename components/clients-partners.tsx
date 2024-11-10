@@ -1,9 +1,9 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 02
+// DONE REVIEWING: GITHUB COMMIT - 03
 
 import trpc from "@/client"
-import {ClientsPartner, Media} from "@/payload-types"
+import {ClientsPartner, Media} from "@/server/payload-types"
 import Image from "next/image"
 import {Fragment} from "react"
 import {Swiper, SwiperSlide} from "swiper/react"

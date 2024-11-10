@@ -1,10 +1,10 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 11
+// DONE REVIEWING: GITHUB COMMIT - 12
 
 import trpc from "@/client"
 import {Link} from "@/i18n/routing"
-import {Media, Service} from "@/payload-types"
+import {Media, Service} from "@/server/payload-types"
 import {useTranslations} from "next-intl"
 import Image from "next/image"
 import Loading from "./loading"

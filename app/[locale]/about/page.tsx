@@ -1,13 +1,13 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 08
+// DONE REVIEWING: GITHUB COMMIT - 09
 import trpc from "@/client"
 import Container from "@/components/container"
 import Loading from "@/components/loading"
 import {Logo} from "@/components/navigation"
 import {Button} from "@/components/ui"
 import {Link} from "@/i18n/routing"
-import {About, Media, TeamMember} from "@/payload-types"
+import {About, Media, TeamMember} from "@/server/payload-types"
 import {useTranslations} from "next-intl"
 import Image from "next/image"
 

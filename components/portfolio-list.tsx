@@ -1,9 +1,9 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 08
+// DONE REVIEWING: GITHUB COMMIT - 09
 
 import trpc from "@/client"
-import {Media, Portfolio} from "@/payload-types"
+import {Media, Portfolio} from "@/server/payload-types"
 import Image from "next/image"
 import Link from "next/link"
 import Loading from "./loading"

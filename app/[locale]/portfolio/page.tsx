@@ -1,9 +1,11 @@
-// DONE REVIEWING: GITHUB COMMIT - 02
-import {getTranslations} from "next-intl/server"
+// DONE REVIEWING: GITHUB COMMIT - 03
+import {getTranslations, setRequestLocale} from "next-intl/server"
 import {Fragment} from "react"
 import {Container, PortfolioList, SectionHeader} from "../../../components/index"
 
 const PortfolioPage = async function PortfolioPage({params: {locale}}: {params: {locale: string}}) {
+  setRequestLocale(locale)
+
   const t = await getTranslations("home-page.portfolios")
 
   return (
