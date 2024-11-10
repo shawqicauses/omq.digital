@@ -1,14 +1,21 @@
-// DONE REVIEWING: GITHUB COMMIT - 11
+// DONE REVIEWING: GITHUB COMMIT - 12
+import {routing} from "@/i18n/routing"
 import {NextIntlClientProvider} from "next-intl"
-import {getMessages} from "next-intl/server"
+import {getMessages, setRequestLocale} from "next-intl/server"
 import {Montserrat, Tajawal} from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
+import {notFound} from "next/navigation"
 import {PropsWithChildren} from "react"
 import {Footer, Navigation} from "../../components/index"
 import {Toaster} from "../../components/ui"
 import "../../styles/global.css"
 import Providers from "../providers"
+
+/* eslint func-style: "off" */
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}))
+}
 
 const tajawal = Tajawal({
   subsets: ["latin"],
@@ -30,11 +37,35 @@ const Layout = async function Layout({
   children
 }: PropsWithChildren & {params: {locale: string}}) {
   const {locale} = params
+
+  if (!routing.locales.includes(locale as any)) notFound()
+
+  setRequestLocale(locale)
+
   const messages = await getMessages()
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className="dark">
-      <head />
+      <head>
+        <link rel="icon" href="../../media/omq-logo-white-24x24.png" />
+        <title>
+          {locale === "ar"
+            ? "عُمق - شركة تسويق رقمي"
+            : locale === "en"
+              ? "OMQ - Digital Marketing Agency"
+              : null}
+        </title>
+        <meta
+          name="description"
+          content={
+            locale === "ar"
+              ? "عُمق للحلول الرقمية هي شريكك الموثوق في تطوير مواقع الويب المبتكرة، والتسويق الرقمي السلس، وحلول التكنولوجيا المتقدمة."
+              : locale === "en"
+                ? "OMQ digital solutions is your trusted partner in innovative web development, seam-less digital marketing, and cutting-edge technology solutions."
+                : null
+          }
+        />
+      </head>
       <body className={`${fonts[locale].className} relative`}>
         <Providers>
           <Image
