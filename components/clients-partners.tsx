@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 01
+// DONE REVIEWING: GITHUB COMMIT - 02
 
 import trpc from "@/client"
 import {ClientsPartner, Media} from "@/payload-types"
@@ -12,16 +12,10 @@ import Loading from "./loading"
 
 import "swiper/css"
 
-const ClientsPartners = function ClientsPartners({
-  locale,
-  asSection = false
-}: {
-  locale: string
-  asSection?: boolean
-}) {
+const ClientsPartners = function ClientsPartners({locale}: {locale: string}) {
   const {data, isLoading} = trpc.getClientsPartners.useQuery({locale})
 
-  if (isLoading || !data) return <Loading screen={!asSection} />
+  if (isLoading || !data) return <Loading screen={false} />
 
   if (!data.clientsPartners.length) return null
 
