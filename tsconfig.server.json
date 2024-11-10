@@ -1,5 +1,5 @@
 {
-  "reviewed": true,
+  "reviewed": "true - 01",
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": false,
@@ -7,5 +7,5 @@
     "jsx": "react",
     "outDir": "dist"
   },
-  "include": ["server.ts", "payload.config.ts"]
+  "include": ["./server/server.ts", "./server/payload.config.ts"]
 }
