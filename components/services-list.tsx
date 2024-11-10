@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT - 09
+// DONE REVIEWING: GITHUB COMMIT - 10
 
 import trpc from "@/client"
 import {Link} from "@/i18n/routing"
@@ -10,15 +10,14 @@ import {Button} from "./ui"
 
 type ServicesListProps = {
   locale: string
-  asSection?: boolean
 }
 
-const ServicesList = function ServicesList({locale, asSection = false}: ServicesListProps) {
+const ServicesList = function ServicesList({locale}: ServicesListProps) {
   const t = useTranslations("home-page.services")
 
   const {data, isLoading} = trpc.getServices.useQuery({locale})
 
-  if (isLoading || !data) return <Loading screen={!asSection} />
+  if (isLoading || !data) return <Loading screen={false} />
 
   if (!data.services.length)
     return (
