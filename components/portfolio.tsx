@@ -1,16 +1,10 @@
-// DONE REVIEWING: GITHUB COMMIT - 13
+// DONE REVIEWING: GITHUB COMMIT - 14
 
 import {useTranslations} from "next-intl"
 import Container from "./container"
 import PortfolioList from "./portfolio-list"
 
-const Portfolio = function Portfolio({
-  locale,
-  asSection = false
-}: {
-  locale: string
-  asSection?: boolean
-}) {
+const Portfolio = function Portfolio({locale}: {locale: string}) {
   const t = useTranslations("home-page.portfolios")
   return (
     <div className="my-16 md:my-32">
@@ -24,7 +18,7 @@ const Portfolio = function Portfolio({
             <p className="text-lg italic leading-8 text-muted-foreground">{t("description")}</p>
           </div>
         </Container>
-        <PortfolioList locale={locale} asSection={asSection} />
+        <PortfolioList locale={locale} />
       </div>
     </div>
   )
