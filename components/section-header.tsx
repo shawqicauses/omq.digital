@@ -1,16 +1,19 @@
-// DONE REVIEWING: GITHUB COMMIT - 06
+// DONE REVIEWING: GITHUB COMMIT - 07
+import {cn} from "@/lib/utils"
 import Image from "next/image"
 
 type SectionHeaderProps = {
   image?: string
   title: string
   description: string
+  isWide?: boolean
 }
 
 const SectionHeader = function SectionHeader({
   image = "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
   title,
-  description
+  description,
+  isWide = false
 }: SectionHeaderProps) {
   const clipPath =
     "polygon(74% 44%, 100% 61%, 97% 26%, 85% 0%, 80% 2%, 72% 32%, 60% 62%, 52% 68%, 47% 58%, 45% 34%, 27% 76%, 0% 64%, 17% 100%, 27% 76%, 76% 97%, 74% 44%)"
@@ -39,7 +42,11 @@ const SectionHeader = function SectionHeader({
         <h2 className="mx-auto max-w-xl-2 text-xl-4 font-bold tracking-tight text-foreground sm:text-xl-6">
           {title}
         </h2>
-        <p className="mx-auto mt-6 max-w-xl-3 text-lg leading-8 text-muted-foreground">
+        <p
+          className={cn("mx-auto mt-6 text-lg leading-8 text-muted-foreground", {
+            "max-w-xl-3": !isWide,
+            "max-w-xl-4": isWide
+          })}>
           {description}
         </p>
       </div>
