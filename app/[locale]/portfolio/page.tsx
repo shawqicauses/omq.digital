@@ -1,18 +1,18 @@
-"use client"
-
-// DONE REVIEWING: GITHUB COMMIT - 01
-import {useTranslations} from "next-intl"
+// DONE REVIEWING: GITHUB COMMIT - 02
+import {getTranslations} from "next-intl/server"
 import {Fragment} from "react"
 import {Container, PortfolioList, SectionHeader} from "../../../components/index"
 
-const PortfolioPage = function PortfolioPage({params: {locale}}: {params: {locale: string}}) {
-  const t = useTranslations("home-page.portfolios")
+const PortfolioPage = async function PortfolioPage({params: {locale}}: {params: {locale: string}}) {
+  const t = await getTranslations("home-page.portfolios")
 
   return (
     <Fragment>
-      <SectionHeader title={t("title")} description={t("description")} />
+      <title>{t("title")}</title>
+      <meta name="description" content={t("description")} />
+      <SectionHeader title={t("title")} description={t("description")} isWide={locale !== "ar"} />
       <Container>
-        <PortfolioList locale={locale} asSection={false} />
+        <PortfolioList locale={locale} />
       </Container>
     </Fragment>
   )
