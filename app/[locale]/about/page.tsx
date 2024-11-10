@@ -1,6 +1,6 @@
 "use client"
 
-// DONE REVIEWING: GITHUB COMMIT - 07
+// DONE REVIEWING: GITHUB COMMIT - 08
 import trpc from "@/client"
 import Container from "@/components/container"
 import Loading from "@/components/loading"
@@ -41,6 +41,8 @@ const Page = function Page({params: {locale}}: {params: {locale: string}}) {
 
   return (
     <main className="relative isolate mt-24">
+      <title>{t("title")}</title>
+      <meta name="description" content={abouts[0].description} />
       <Container>
         {/* Background */}
         <div
