@@ -1,18 +1,18 @@
-// DONE REVIEWING: GITHUB COMMIT - 07
+// DONE REVIEWING: GITHUB COMMIT - 08
 import {webpackBundler} from "@payloadcms/bundler-webpack"
 import {mongooseAdapter} from "@payloadcms/db-mongodb"
 import {lexicalEditor} from "@payloadcms/richtext-lexical"
 import dotenv from "dotenv"
 import path from "path"
 import {buildConfig} from "payload/config"
-import AboutsCollection from "./server/collections/abouts"
-import ClientsPartnersCollection from "./server/collections/clients-partners"
-import MediaCollection from "./server/collections/media"
-import PortfoliosCollection from "./server/collections/portfolios"
-import ServicesCollection from "./server/collections/services"
-import TeamMembersCollection from "./server/collections/team-members"
+import AboutsCollection from "./collections/abouts"
+import ClientsPartnersCollection from "./collections/clients-partners"
+import MediaCollection from "./collections/media"
+import PortfoliosCollection from "./collections/portfolios"
+import ServicesCollection from "./collections/services"
+import TeamMembersCollection from "./collections/team-members"
 
-dotenv.config({path: path.resolve(__dirname, ".env")})
+dotenv.config({path: path.resolve(__dirname, "../.env")})
 
 const config = buildConfig({
   serverURL: process.env.NEXT_PUBLIC_SERVER_URL,
