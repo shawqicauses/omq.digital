@@ -1,8 +1,9 @@
-// DONE REVIEWING: GITHUB COMMIT - 02
+// DONE REVIEWING: GITHUB COMMIT - 03
 import {inferAsyncReturnType} from "@trpc/server"
 import * as trpcExpress from "@trpc/server/adapters/express"
 import dotenv from "dotenv"
 import express from "express"
+import nextBuild from "next/dist/build"
 import path from "path"
 import {appRouter} from "./server/api"
 import {nextApplication, nextRequestHandler, port} from "./server/next"
@@ -19,6 +20,16 @@ const createContext = function createContext({req, res}: trpcExpress.CreateExpre
 export type ExpressContext = inferAsyncReturnType<typeof createContext>
 
 const start = async function start() {
+  if (process.env.NEXT_BUILD) {
+    app.listen(port, async () => {
+      // @ts-expect-error
+      await nextBuild(path.join(__dirname, "../"))
+      process.exit()
+    })
+
+    return
+  }
+
   const payload = await initPayload({
     initOptions: {
       express: app,
