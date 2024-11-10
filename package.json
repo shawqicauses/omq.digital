@@ -6,12 +6,16 @@
   "author": "shawqicauses <shawqicauses@outlook.com>",
   "license": "ISC",
   "private": true,
+  "main": "dist/server.js",
   "scripts": {
-    "payload:types": "cross-env payload generate:types",
-    "dev": "cross-env nodemon",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev:server": "cross-env PAYLOAD_CONFIG_PATH=payload.config.ts nodemon",
+    "build:payload": "cross-env PAYLOAD_CONFIG_PATH=payload.config.ts payload build",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:next": "cross-env PAYLOAD_CONFIG_PATH=dist/payload.config.js NEXT_BUILD=true node dist/server.js",
+    "build:application": "cross-env NODE_ENV=production yarn generate:types && yarn build:payload && yarn build:server && yarn copyfiles && yarn build:next",
+    "serve:application": "cross-env NODE_ENV=production PAYLOAD_CONFIG_PATH=dist/payload.config.js node dist/server.js",
+    "generate:types": "cross-env PAYLOAD_CONFIG_PATH=./payload.config.ts payload generate:types",
+    "copyfiles": "copyfiles -u 1 \"./media/**/*.{jpeg,jpg,png,svg}\" dist/media"
   },
   "dependencies": {
     "@headlessui/react": "2.0.3",
@@ -39,7 +43,7 @@
     "express": "4.21.0",
     "lucide-react": "0.378.0",
     "next": "14.2.3",
-    "next-intl": "3.19.4",
+    "next-intl": "3.25.0",
     "next-themes": "0.3.0",
     "nodemon": "3.1.5",
     "payload": "2.30.3",
@@ -60,6 +64,7 @@
     "@types/react": "18.3.2",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.19",
+    "copyfiles": "2.4.1",
     "eslint": "8.57.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-next": "14.2.3",
